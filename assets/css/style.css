@@ -1,0 +1,20 @@
+:root
+
+html {
+    font-size: 62.5%;
+} 
+
+body {
+    font-size: 1.6rem;
+    background: url("../images/background-stars.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+#star-wars-logo {
+    margin-top: 2rem;
+    width: 50%;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
