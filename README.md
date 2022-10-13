@@ -40,4 +40,9 @@ Main purpose of this project is to be little game where you choose correct answe
     - As user I want you to press **Play** and play the game.
     - As user I want you to be able to tell how good you have done with questions by tracking the **Score**.
     - ** placeholder for more user stories** 
-    
+
+## Website Goals
+
+- Goal of the website is to test your knowledge about Star Wars.
+- Website goal is to keep track of your score.
+
