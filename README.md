@@ -157,3 +157,33 @@ Main purpose of this project is to be little game where you choose correct answe
     **placeholder**
 
 [Back to top](#star-wars--quiz-game)
+
+# Testing 
+
+- W3S HTML
+
+**placeholder**
+
+- W3S CSS
+
+**placeholder**
+
+- JavaScript
+
+**placeholder**
+
+- ALL other tests done
+
+**placeholder**
+
+**placeholder**
+
+**placeholder**
+
+**placeholder**
+
+**placeholder**
+
+
+
+
