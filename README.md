@@ -196,6 +196,15 @@ Main purpose of this project is to be little game where you choose correct answe
 </details>
 <br>
 
+# Deployment
+Following writing the code then commiting and pushing to GitHub, this project was deployed using GitHub by the following steps.
+
+1. Navigate to the repository on github and click **Settings**.
+2. Then select **Pages** on the side navigation.
+3. Select the None dropdown, and then click **Main**.
+4. Click on the **Save** button.
+5. Now the website is now live on 
+6. If any changes are required, they can be done, commited and pushed to GitHub and the changes will be updated.
 
 
 
