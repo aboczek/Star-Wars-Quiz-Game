@@ -52,3 +52,10 @@ Main purpose of this project is to be little game where you choose correct answe
 - I want user to be able to play the game without any issues.
 - Game has to be designed to fit all devices.
 
+## Expectations
+
+- I expect users to easily navigate through website.
+- I expect users to be able to play the game.
+- I expect website to match with colors nicely.
+
+
