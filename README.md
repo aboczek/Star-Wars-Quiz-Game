@@ -65,4 +65,10 @@ Main purpose of this project is to be little game where you choose correct answe
 
     - **placeholder**
 
-## 
+- Fonts
+    - **placeholder**
+
+- Image 
+    - **placeholder**
+
+[Back to top](#star-wars--quiz-game)
