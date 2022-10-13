@@ -184,6 +184,18 @@ Main purpose of this project is to be little game where you choose correct answe
 
 **placeholder**
 
+# Testing user stories
+
+- abcdefg **placeholder**
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| **plaholder** | **placeholder** | **placegolder** | PASS              |
+<details><summary>Picture</summary>
+<img src="documentation/testing-user-stories-1.jpg" alt="Landing page"/>
+</details>
+<br>
+
 
 
 
