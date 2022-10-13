@@ -131,3 +131,29 @@ Main purpose of this project is to be little game where you choose correct answe
 1. Responsive on all devices.
 2. Interactive buttons.
 3. Highscore.
+
+## Navigation bar
+
+- Mobile
+    - **placeholder**
+
+- Tablet 
+    - **Placeholder**
+
+- Desktop
+    - **Placeholder**
+
+- Main content of website.
+    - Mobile 
+
+    **placeholder**
+
+    - Tablet
+
+    **placeholder**
+
+    - Desktop
+
+    **placeholder**
+
+[Back to top](#star-wars--quiz-game)
