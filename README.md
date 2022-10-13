@@ -72,3 +72,27 @@ Main purpose of this project is to be little game where you choose correct answe
     - **placeholder**
 
 [Back to top](#star-wars--quiz-game)
+
+## Wireframes
+
+### Mobile
+
+**placeholder**
+
+### Tablet 
+
+**placeholder**
+
+### Desktop
+
+**placeholder**
+
+## Website Structure
+
+**placeholder**
+|  Screen size |  Breakpoint |
+|---|---|
+|small|>= 576px|
+|medium|>= 768px|
+|large|>= 1024px|
+**placeholder**
