@@ -25,3 +25,8 @@ This is Portfolio Project 2 called Star Wars || Quiz game (Those two Pipe lines 
 - [Testing user stories](#testing-user-stories)
 - [Deployment](#deployment)
 - [Credits](#credits)
+
+# Motivation
+
+This project is about Star Wars quiz game, I have liked Star Wars since little kid. I have watched all the movies and played games as well.
+Main purpose of this project is to be little game where you choose correct answer, and at the end you will see your score how good you did.
