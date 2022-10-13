@@ -30,3 +30,14 @@ This is Portfolio Project 2 called Star Wars || Quiz game (Those two Pipe lines 
 
 This project is about Star Wars quiz game, I have liked Star Wars since little kid. I have watched all the movies and played games as well.
 Main purpose of this project is to be little game where you choose correct answer, and at the end you will see your score how good you did.
+
+# User Experience (UX)
+
+## User Stories:
+- User Story
+    - As user I want you to land on main page and be able to tell what is the game about.
+    - As user I want you to easily navigate through the website.
+    - As user I want you to press **Play** and play the game.
+    - As user I want you to be able to tell how good you have done with questions by tracking the **Score**.
+    - ** placeholder for more user stories** 
+    
