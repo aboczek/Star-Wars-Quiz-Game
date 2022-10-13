@@ -58,4 +58,11 @@ Main purpose of this project is to be little game where you choose correct answe
 - I expect users to be able to play the game.
 - I expect website to match with colors nicely.
 
+## Design 
 
+- Colors:
+    - Colors used on the website are:
+
+    - **placeholder**
+
+## 
