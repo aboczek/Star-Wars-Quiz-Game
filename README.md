@@ -126,3 +126,8 @@ Main purpose of this project is to be little game where you choose correct answe
 - [screenfly](https://screenfly.org/)
     - Testing My website on it.
 
+# Features
+
+1. Responsive on all devices.
+2. Interactive buttons.
+3. Highscore.
