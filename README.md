@@ -96,3 +96,33 @@ Main purpose of this project is to be little game where you choose correct answe
 |medium|>= 768px|
 |large|>= 1024px|
 **placeholder**
+
+[Back to top](#star-wars--quiz-game)
+
+# Technology, Frameworks and Programs used.
+
+## Languages
+
+- [HTML](https://en.wikipedia.org/wiki/HTML5)
+
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+## Frameworks and Programs used.
+
+- [Google fonts](https://fonts.google.com/)
+    - Google fonts was used to pick and import fonts to my project.
+    
+- [GitHub](https://github.com/)
+    - GitHub was used to store my source code by git add . git commit and git push.
+
+- [Git](https://gitpod.io/)
+    - Git was used with GitPod to write down the code and push it to GitHub.
+    
+- [Balsamiq](https://balsamiq.com/)
+    - Balsamiq was used to design the website idea itself.
+
+- [screenfly](https://screenfly.org/)
+    - Testing My website on it.
+
