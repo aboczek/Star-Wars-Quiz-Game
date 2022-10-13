@@ -206,5 +206,15 @@ Following writing the code then commiting and pushing to GitHub, this project wa
 5. Now the website is now live on 
 6. If any changes are required, they can be done, commited and pushed to GitHub and the changes will be updated.
 
+# Credits:
 
+- Slack Community and my Mentor!
+- [Simen Daehlin](https://github.com/Eventyret) My Mentor very Helpfull!
+- [screenfly](https://screenfly.org/) for testing my website ;).
+- [The W3C Markup Validation Service](https://validator.w3.org/) Validation of HTML.
+- [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) Validation of CSS.
+- [AmIresponsive](https://ui.dev/amiresponsive) for responsive look of my website.
+- [Autoprefixer](https://autoprefixer.github.io/) used to prefix CSS.
+
+[Back to top](#gourmet-restaurant-portfolio-project-1)
 
