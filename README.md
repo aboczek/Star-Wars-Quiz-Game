@@ -46,3 +46,9 @@ Main purpose of this project is to be little game where you choose correct answe
 - Goal of the website is to test your knowledge about Star Wars.
 - Website goal is to keep track of your score.
 
+## Requirements
+
+- Easily readable website.
+- I want user to be able to play the game without any issues.
+- Game has to be designed to fit all devices.
+
