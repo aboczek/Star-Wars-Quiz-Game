@@ -1,4 +1,11 @@
-:root
+:root {
+    --bluebutton: #00ccff;
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+}
 
 html {
     font-size: 62.5%;
@@ -8,13 +15,24 @@ body {
     font-size: 1.6rem;
     background: url("../images/background-stars.jpg") no-repeat center center fixed;
     background-size: cover;
+    background-attachment: fixed;
 }
 
+/** Star Wars logo on top of background picture **/
+
 #star-wars-logo {
-    margin-top: 2rem;
-    width: 50%;
+    margin: 2rem auto 0 auto;
+    width: 40%;
     align-items: center;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    
+}
+
+/** Game Board and buttons **/
+
+#game-board {
+    display: flex;
+    flex-direction: column;
+    margin:20% auto;
+
 }
