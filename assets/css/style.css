@@ -98,11 +98,23 @@ body {
 }
 
 /** Game Window **/
+
 #game-window {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: var(--white);
+}
+
+#game-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+}
+
+#game-result > input {
+    margin-top: 1rem;
 }
 
 /** footer **/
