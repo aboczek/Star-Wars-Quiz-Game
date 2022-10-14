@@ -61,6 +61,19 @@ body {
     transition: 2sec;
 }
 
+/** Rules **/
+
+#rules {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+    margin: 5% 0;
+    font-size: 1rem;
+    background-color: var(--grey);
+    backdrop-filter: blur(2px);
+}
+
 /** footer **/
 
 footer {
