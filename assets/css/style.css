@@ -5,6 +5,7 @@
 :root {
     --bluebutton: #00ccff;
     --white: #fff;
+    --grey: #838383;
   }
 
 * {
@@ -27,7 +28,7 @@ body {
 /** Star Wars logo on top of background picture **/
 
 #star-wars-logo {
-    margin: -6rem auto 0 auto;
+    margin: -6rem auto;
     max-width: 80%;
     align-items: center;
     display: block;
@@ -53,4 +54,9 @@ body {
     color: var(--white);
     font-size: 2rem;
     font-weight: 700;
+}
+
+.btn:hover {
+    background-color: var(--grey);
+    transition: 2sec;
 }
