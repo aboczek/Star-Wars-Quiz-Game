@@ -48,7 +48,7 @@ body {
     background-color: var(--bluebutton);
     width: 25rem;
     height: 4.5rem;
-    margin: 2rem 0;
+    margin: 4.5rem 0 0 0;
     border: none;
     border-radius: 1rem;
     color: var(--white);
@@ -81,7 +81,7 @@ body {
 
 /** Highscore / Leaderboard **/
 
-#score {
+.score {
     color: var(--white);
     display: flex;
     flex-direction: column;
@@ -91,6 +91,10 @@ body {
     width: 25rem;
     font-size: 1.5rem;
     backdrop-filter: blur(10px);
+}
+
+.score-list {
+    margin-top: 0.7rem;
 }
 
 /** footer **/
