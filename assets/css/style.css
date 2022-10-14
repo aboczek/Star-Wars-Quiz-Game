@@ -44,7 +44,7 @@ body {
     margin: 5% 0;
 }
 
-.btn {
+#btn {
     background-color: var(--bluebutton);
     width: 25rem;
     height: 4.5rem;
@@ -56,7 +56,7 @@ body {
     font-weight: 700;
 }
 
-.btn:hover {
+#btn:hover {
     background-color: var(--grey);
     transition: 2sec;
 }
