@@ -22,7 +22,7 @@ body {
 
 #star-wars-logo {
     margin: 2rem auto 0 auto;
-    width: 40%;
+    max-width: 95%;
     align-items: center;
     display: block;
     
