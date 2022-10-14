@@ -28,7 +28,7 @@ body {
 /** Star Wars logo on top of background picture **/
 
 #star-wars-logo {
-    margin: -6rem auto;
+    margin: -6rem auto 0.5rem auto;
     max-width: 80%;
     align-items: center;
     display: block;
