@@ -80,6 +80,12 @@ body {
     font-size: 1.5rem;
 }
 
+/** Highscore / Leaderboard **/
+
+#score {
+    color: var(--white);
+}
+
 /** footer **/
 
 footer {
