@@ -1,5 +1,10 @@
+/** Fonts **/
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+
 :root {
     --bluebutton: #00ccff;
+    --white: #fff;
   }
 
 * {
@@ -16,6 +21,7 @@ body {
     background: url("../images/background-stars.jpg") no-repeat center center fixed;
     background-size: cover;
     background-attachment: fixed;
+    font-family: "Kanit", sans-serif;
 }
 
 /** Star Wars logo on top of background picture **/
@@ -33,6 +39,18 @@ body {
 #game-board {
     display: flex;
     flex-direction: column;
-    margin:20% auto;
+    align-items: center;
+    margin:20% 0;
+}
 
+.btn {
+    background-color: var(--bluebutton);
+    width: 30rem;
+    height: 5rem;
+    margin: 2rem 0;
+    border: none;
+    border-radius: 1rem;
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 700;
 }
