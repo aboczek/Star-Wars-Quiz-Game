@@ -58,7 +58,6 @@ body {
 
 #btn:hover {
     background-color: var(--grey);
-    transition: 2sec;
 }
 
 /** Rules **/
@@ -84,6 +83,13 @@ body {
 
 #score {
     color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% auto;
+    height: 80%;
+    width: 25rem;
+    font-size: 1.5rem;
 }
 
 /** footer **/
