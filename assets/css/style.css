@@ -27,8 +27,8 @@ body {
 /** Star Wars logo on top of background picture **/
 
 #star-wars-logo {
-    margin: 2rem auto 0 auto;
-    max-width: 95%;
+    margin: -6rem auto 0 auto;
+    max-width: 80%;
     align-items: center;
     display: block;
     
@@ -40,13 +40,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin:20% 0;
+    margin: 5% 0;
 }
 
 .btn {
     background-color: var(--bluebutton);
-    width: 30rem;
-    height: 5rem;
+    width: 25rem;
+    height: 4.5rem;
     margin: 2rem 0;
     border: none;
     border-radius: 1rem;
