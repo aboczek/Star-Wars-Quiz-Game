@@ -114,4 +114,9 @@ const gameBoard = document.getElementById("game-board");
 const playGame = document.getElementById("play-game");
 const highscore = document.getElementById("highscore");
 const rules = document.getElementById("rules");
+const gameWindow = document.getElementById("game-window");
+const questions = document.getElementById("question");
+const firstAnswer = document.getElementById("a");
+const secondAnswer = document.getElementById("b");
+const thirdAnswer = document.getElementById("c");
 
