@@ -123,6 +123,10 @@ body {
     margin-top: 1rem;
 }
 
+#question {
+    text-align: center;
+}
+
 /** footer **/
 
 footer {
