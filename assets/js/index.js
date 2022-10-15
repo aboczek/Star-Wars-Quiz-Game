@@ -109,3 +109,9 @@ let questionContainer = [{
         correct: "c"
     },
 ]
+// Declaring all variables to get elements from html file
+const gameBoard = document.getElementById("game-board");
+const playGame = document.getElementById("play-game");
+const highscore = document.getElementById("highscore");
+const rules = document.getElementById("rules");
+
