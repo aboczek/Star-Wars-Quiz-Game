@@ -112,11 +112,31 @@ let questionContainer = [{
 // Declaring all variables to get elements from html file
 const gameBoard = document.getElementById("game-board");
 const playGame = document.getElementById("play-game");
-const highscore = document.getElementById("highscore");
+const highscore = document.getElementById("score-on");
 const rules = document.getElementById("rules");
 const gameWindow = document.getElementById("game-window");
 const questions = document.getElementById("question");
 const firstAnswer = document.getElementById("a");
 const secondAnswer = document.getElementById("b");
 const thirdAnswer = document.getElementById("c");
+const gameResult = document.getElementById("game-result");
+const gameScore = document.getElementById("game-score");
+const mainMenu = document.getElementById("main-menu");
+
+// Hidding unecessary content from viewing and loading Dom
+window.addEventListener('DOMContentLoaded', () => {
+    rules.style.display = "none";
+    gameWindow.style.display = "none";
+    highscore.style.display = "none";
+    gameResult.style.display = "none";    
+    playGame.addEventListener("click", startGame);
+    highscore.addEventListener("click", showScore);
+})
+
+function startGame () {
+    rules.style.display = "block";
+    gameBoard.style.display = "none";
+
+    setTimeout("5000");
+}
 
