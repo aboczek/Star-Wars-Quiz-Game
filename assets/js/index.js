@@ -111,7 +111,7 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 let currentQuestion = {};
-let acceptingAnswers = true;
+let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
@@ -136,15 +136,19 @@ startGame = () => {
         gameWindow.style.display = "flex";
     }, 5000);
 };
-
+// inserts questions in html #question randomly generated from array
 getNewQuestion = () => {
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
-
+// inserts answers to buttons in html
     answers.forEach((answer) => {
         number = answer.dataset['number'];
         answer.innerText = currentQuestion['answer' + number];
     });
+
+    availableQuestions.splice(questionIndex, 1);
+
+    acceptingAnswers = true;
 };
