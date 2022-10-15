@@ -132,7 +132,7 @@ window.addEventListener('DOMContentLoaded', () => {
     playGame.addEventListener("click", startGame);
     highscore.addEventListener("click", showScore);
 })
-
+// Starting the game
 function startGame () {
     rules.style.display = "block";
     gameBoard.style.display = "none";
@@ -140,6 +140,7 @@ function startGame () {
     setTimeout (function() {
         rules.style.display = "none"
         gameWindow.style.display = "flex";
-    }, 22222000);
+    }, 5000);
+
 }
 
