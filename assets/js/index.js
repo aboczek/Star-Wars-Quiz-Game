@@ -4,7 +4,7 @@ let questionContainer = [{
         answer1: "Naboo",
         answer2: "Kashyyk",
         answer3: "Dagobah",
-        correct: "3"
+        correct: 3
     },
 
     {
@@ -12,7 +12,7 @@ let questionContainer = [{
         answer1: "3",
         answer2: "2 milion",
         answer3: "Over 60 million languages",
-        correct: "3"
+        correct: 3
     },
 
     {
@@ -20,7 +20,7 @@ let questionContainer = [{
         answer1: "Anakin Skywalker",
         answer2: "Boba Fett",
         answer3: "Princes Leia",
-        correct: "1"
+        correct: 1
     },
 
     {
@@ -28,7 +28,7 @@ let questionContainer = [{
         answer1: "69",
         answer2: "900",
         answer3: "232",
-        correct: "2"
+        correct: 2
     },
 
     {
@@ -36,7 +36,7 @@ let questionContainer = [{
         answer1: "Luke Skywalker",
         answer2: "Anakin Skywalker",
         answer3: "Obi Wan Kenobi",
-        correct: "2"
+        correct: 2
     },
 
     {
@@ -44,7 +44,7 @@ let questionContainer = [{
         answer1: "There can only be 2 Sith Lords at one time.",
         answer2: "Eye for an eye",
         answer3: "Brunch and dinner",
-        correct: "1"
+        correct: 1
     },
 
     {
@@ -52,7 +52,7 @@ let questionContainer = [{
         answer1: "Brad Pitt",
         answer2: "Harrison Ford",
         answer3: "Daniel Radcliffe",
-        correct: "1"
+        correct: 1
     },
 
     {
@@ -60,7 +60,7 @@ let questionContainer = [{
         answer1: "Padmé Amidala",
         answer2: "Ahsoka Tano",
         answer3: "Jyn Erso",
-        correct: "1"
+        correct: 1
     },
 
     {
@@ -68,7 +68,7 @@ let questionContainer = [{
         answer1: "9",
         answer2: "14",
         answer3: "18",
-        correct: "2"
+        correct: 2
     },
 
     {
@@ -76,7 +76,7 @@ let questionContainer = [{
         answer1: "Master Yoda",
         answer2: "Princess Leia",
         answer3: "Chewbacca",
-        correct: "2"
+        correct: 2
     },
 
     {
@@ -84,7 +84,7 @@ let questionContainer = [{
         answer1: "2",
         answer2: "3",
         answer3: "4",
-        correct: "3"
+        correct: 3
     }
 ]
 // Declaring all variables to get elements from html file
@@ -94,7 +94,7 @@ const highscore = document.getElementById("score-on");
 const rules = document.getElementById("rules");
 const gameWindow = document.getElementById("game-window");
 const question = document.getElementById("question");
-const answers = Array.from(document.getElementsByClassName("answers"));
+const answers = Array.from(document.getElementsByClassName("answer"));
 const gameResult = document.getElementById("game-result");
 const gameScore = document.getElementById("game-score");
 const mainMenu = document.getElementById("main-menu");
@@ -105,6 +105,7 @@ window.addEventListener('DOMContentLoaded', () => {
     gameWindow.style.display = "none";
     highscore.style.display = "none";
     gameResult.style.display = "none";
+    // listenning to clicks on Play button and Highscore
     playGame.addEventListener("click", startGame);
     highscore.addEventListener("click", showScore);
 })
@@ -126,10 +127,10 @@ startGame = () => {
     availableQuestions = [... questionContainer];
     console.log(availableQuestions);
     getNewQuestion ();
-
+// hides main game board and shows rules
         rules.style.display = "flex";
     gameBoard.style.display = "none";
-
+// hides rules and shows game window for questions with 5 seconds timeout on rules
     setTimeout(function () {
         rules.style.display = "none"
         gameWindow.style.display = "flex";
@@ -142,8 +143,8 @@ getNewQuestion = () => {
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
 
-    answers.forEach(answer => {
-        const number = answer.dataset["number"];
-        answer.innterText = currentQuestion["answer" * number];
-    })
-}
+    answers.forEach((answer) => {
+        number = answer.dataset['number'];
+        answer.innerText = currentQuestion['answer' + number];
+    });
+};
