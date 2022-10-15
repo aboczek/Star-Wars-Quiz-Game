@@ -107,7 +107,7 @@ let questionContainer = [{
             c: "4"
         },
         correct: "c"
-    },
+    }
 ]
 // Declaring all variables to get elements from html file
 const gameBoard = document.getElementById("game-board");
@@ -132,8 +132,9 @@ window.addEventListener('DOMContentLoaded', () => {
     playGame.addEventListener("click", startGame);
     highscore.addEventListener("click", showScore);
 })
-// Starting the game
-function startGame () {
+
+// Starting the rules before game
+function startGameRules () {
     rules.style.display = "block";
     gameBoard.style.display = "none";
 
@@ -141,6 +142,15 @@ function startGame () {
         rules.style.display = "none"
         gameWindow.style.display = "flex";
     }, 5000);
-
 }
+
+// Start the game
+startGame = () => {
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...questionContainer];
+    getQuestion();
+}
+
+
 
