@@ -116,9 +116,6 @@ const highscore = document.getElementById("score-on");
 const rules = document.getElementById("rules");
 const gameWindow = document.getElementById("game-window");
 const questions = document.getElementById("question");
-const firstAnswer = document.getElementById("a");
-const secondAnswer = document.getElementById("b");
-const thirdAnswer = document.getElementById("c");
 const gameResult = document.getElementById("game-result");
 const gameScore = document.getElementById("game-score");
 const mainMenu = document.getElementById("main-menu");
@@ -144,13 +141,13 @@ function startGameRules () {
     }, 5000);
 }
 
+const MAX_QUESTIONS = 10;
+
 // Start the game
 startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questionContainer];
-    getQuestion();
 }
-
 
 
