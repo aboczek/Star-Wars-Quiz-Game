@@ -137,6 +137,9 @@ function startGame () {
     rules.style.display = "block";
     gameBoard.style.display = "none";
 
-    setTimeout("5000");
+    setTimeout (function() {
+        rules.style.display = "none"
+        gameWindow.style.display = "flex";
+    }, 22222000);
 }
 

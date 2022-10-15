@@ -79,6 +79,12 @@ body {
     font-size: 1.5rem;
 }
 
+#five-seconds {
+    text-align: center;
+    margin: 2rem auto;
+    font-size: 2rem;
+}
+
 /** Highscore / Leaderboard **/
 
 .score {
