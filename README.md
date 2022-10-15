@@ -215,6 +215,7 @@ Following writing the code then commiting and pushing to GitHub, this project wa
 - [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) Validation of CSS.
 - [AmIresponsive](https://ui.dev/amiresponsive) for responsive look of my website.
 - [Autoprefixer](https://autoprefixer.github.io/) used to prefix CSS.
+- [Big Quiz Thing](https://bigquizthing.com/blog-post/star-wars-trivia-questions-for-fun-game-night/) Questions for quiz.
 
 [Back to top](#gourmet-restaurant-portfolio-project-1)
 
