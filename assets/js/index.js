@@ -125,7 +125,6 @@ startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuestions = [... questionContainer];
-    console.log(availableQuestions);
     getNewQuestion ();
 // hides main game board and shows rules
         rules.style.display = "flex";
@@ -138,17 +137,32 @@ startGame = () => {
 };
 // inserts questions in html #question randomly generated from array
 getNewQuestion = () => {
+        if(availableQuestions.lenght == 0 || questionCounter >= MAX_QUESTIONS) {
+
+        }
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
 // inserts answers to buttons in html
     answers.forEach((answer) => {
-        number = answer.dataset['number'];
-        answer.innerText = currentQuestion['answer' + number];
+        number = answer.dataset["number"];
+        answer.innerText = currentQuestion["answer" + number];
     });
 
     availableQuestions.splice(questionIndex, 1);
 
     acceptingAnswers = true;
 };
+// gets new question after selecting answer
+answers.forEach(answer => {
+    answer.addEventListener("click", e => {
+        if (!acceptingAnswers) return;
+
+        acceptingAnswers = false;
+        const selectedAnswer = e.target;
+        const selectedButton = selectedAnswer.dataset["number"];
+        console.log(selectedButton ==currentQuestion.correctAnswer);
+        getNewQuestion();
+    });
+});
