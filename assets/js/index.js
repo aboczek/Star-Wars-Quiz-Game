@@ -159,7 +159,7 @@ answers.forEach(answer => {
         if(selectedButton == currentQuestion.correct) {
             classToApply = 'correct';
         };
-
+// adds class to container if answer is correct or incorrect and will change color accordingly
         selectedAnswer.parentElement.classList.add(classToApply);
 
         setTimeout( () => {

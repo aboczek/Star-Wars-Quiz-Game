@@ -34,8 +34,8 @@
             <li class="rules-paragraph">3 answers pick correct one.</li>
             <li class="rules-paragraph">Score will be counted and shown at the end.</li>
             <li class="rules-paragraph">Hope you enjoy this quiz :)</li>
-            <p id="five-seconds">Game will start in 5s.</p>
         </ul>
+        <p id="five-seconds">Game will start in 5s.</p>
     </div>
     <!-- Highscore -->
     <div class="score" id="score-on">
@@ -45,7 +45,10 @@
     </div>
     <!-- Game -->
     <div class="game-on" id="game-window">
-        <h3>Question:</h3>
+        <div id="question-counter">
+            <h2 id="question-counter-number">1/10</h2>
+        </div>
+        <p>Question:</p>
         <p id="question">x</p>
         <div class="btn-container">
             <p class="answer" data-number="1">answer 1</p>
