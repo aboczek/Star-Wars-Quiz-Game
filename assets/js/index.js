@@ -153,7 +153,20 @@ answers.forEach(answer => {
         acceptingAnswers = false;
         const selectedAnswer = e.target;
         const selectedButton = selectedAnswer.dataset["number"];
-        console.log(selectedButton == currentQuestion.correct);
-        getNewQuestion();
+
+// if true it changes to correct if false changes to incorrect
+        let classToApply = 'incorrect';
+        if(selectedButton == currentQuestion.correct) {
+            classToApply = 'correct';
+        };
+
+        selectedAnswer.parentElement.classList.add(classToApply);
+
+        setTimeout( () => {
+            selectedAnswer.parentElement.classList.remove(classToApply);
+            getNewQuestion();
+        });
+
+        
     });
 });

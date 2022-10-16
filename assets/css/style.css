@@ -6,6 +6,8 @@
     --bluebutton: #00ccff;
     --white: #fff;
     --grey: #838383;
+    --green: #2FFF7C;
+    --red: #FF6B6B;
   }
 
 * {
@@ -125,6 +127,14 @@ body {
 
 #question {
     text-align: center;
+}
+
+.correct {
+    background-color: var(--green);
+}
+
+.incorrect {
+    background-color: var(--red);
 }
 
 /** footer **/
