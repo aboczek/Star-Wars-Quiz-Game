@@ -151,7 +151,6 @@ getNewQuestion = () => {
     });
 
     availableQuestions.splice(questionIndex, 1);
-
     acceptingAnswers = true;
 };
 // gets new question after selecting answer
@@ -162,7 +161,7 @@ answers.forEach(answer => {
         acceptingAnswers = false;
         const selectedAnswer = e.target;
         const selectedButton = selectedAnswer.dataset["number"];
-        console.log(selectedButton ==currentQuestion.correctAnswer);
+        console.log(selectedButton == currentQuestion.correct);
         getNewQuestion();
     });
 });
