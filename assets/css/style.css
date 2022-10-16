@@ -146,16 +146,6 @@ body {
     text-align: center;
 }
 
-/* #question-counter {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-#question-counter-number {
-    
-} */
-
 .correct {
     background-color: var(--green);
 }

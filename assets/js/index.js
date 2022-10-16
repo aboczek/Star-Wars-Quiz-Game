@@ -90,6 +90,7 @@ const answers = Array.from(document.getElementsByClassName("answer"));
 const gameResult = document.getElementById("game-result");
 const gameScore = document.getElementById("game-score");
 const mainMenu = document.getElementById("main-menu");
+const questionCount = document.getElementById("question-counter");
 
 // Hidding unecessary content from viewing and loading Dom
 window.addEventListener('DOMContentLoaded', () => {
@@ -109,19 +110,19 @@ let questionCounter = 0;
 let availableQuestions = [];
 
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 9;
+const MAX_QUESTIONS = 10;
 
 // // //Starting the rules before game
 
 startGame = () => {
     questionCounter = 0;
     score = 0;
-    availableQuestions = [... questionContainer];
-    getNewQuestion ();
-// hides main game board and shows rules
-        rules.style.display = "flex";
+    availableQuestions = [...questionContainer];
+    getNewQuestion();
+    // hides main game board and shows rules
+    rules.style.display = "flex";
     gameBoard.style.display = "none";
-// hides rules and shows game window for questions with 5 seconds timeout on rules
+    // hides rules and shows game window for questions with 5 seconds timeout on rules
     setTimeout(function () {
         rules.style.display = "none"
         gameWindow.style.display = "flex";
@@ -129,14 +130,16 @@ startGame = () => {
 };
 // inserts questions in html #question randomly generated from array
 getNewQuestion = () => {
-        if(availableQuestions.lenght == 0 || questionCounter >= MAX_QUESTIONS) {
-
-        }
+    if (availableQuestions.lenght == 0 || questionCounter >= MAX_QUESTIONS) {
+        return;
+    }
     questionCounter++;
+    questionCount.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
+
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
-// inserts answers to buttons in html
+    // inserts answers to buttons in html
     answers.forEach((answer) => {
         number = answer.dataset["number"];
         answer.innerText = currentQuestion["answer" + number];
@@ -149,24 +152,24 @@ getNewQuestion = () => {
 answers.forEach(answer => {
     answer.addEventListener("click", e => {
         if (!acceptingAnswers) return;
-// checks if answer is true or false
+        // checks if answer is true or false
         acceptingAnswers = false;
         const selectedAnswer = e.target;
         const selectedButton = selectedAnswer.dataset["number"];
 
-// if true it changes to correct if false changes to incorrect
+        // if true it changes to correct if false changes to incorrect
         let classToApply = 'incorrect';
-        if(selectedButton == currentQuestion.correct) {
+        if (selectedButton == currentQuestion.correct) {
             classToApply = 'correct';
         };
-// adds class to container if answer is correct or incorrect and will change color accordingly
+        // adds class to container if answer is correct or incorrect and will change color accordingly
         selectedAnswer.parentElement.classList.add(classToApply);
 
-        setTimeout( () => {
+        setTimeout(() => {
             selectedAnswer.parentElement.classList.remove(classToApply);
             getNewQuestion();
         }, 1000);
 
-        
+
     });
 });
