@@ -52,7 +52,7 @@ let questionContainer = [{
         answer1: "Brad Pitt",
         answer2: "Harrison Ford",
         answer3: "Daniel Radcliffe",
-        correct: 1
+        correct: 2
     },
 
     {
@@ -78,15 +78,7 @@ let questionContainer = [{
         answer3: "Chewbacca",
         correct: 2
     },
-
-    {
-        question: "How many engines does the X-Wing Fighter have?",
-        answer1: "2",
-        answer2: "3",
-        answer3: "4",
-        correct: 3
-    }
-]
+];
 // Declaring all variables to get elements from html file
 const gameBoard = document.getElementById("game-board");
 const playGame = document.getElementById("play-game");
@@ -108,7 +100,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // listenning to clicks on Play button and Highscore
     playGame.addEventListener("click", startGame);
     highscore.addEventListener("click", showScore);
-})
+});
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -117,7 +109,7 @@ let questionCounter = 0;
 let availableQuestions = [];
 
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 10;
+const MAX_QUESTIONS = 9;
 
 // // //Starting the rules before game
 
@@ -157,7 +149,7 @@ getNewQuestion = () => {
 answers.forEach(answer => {
     answer.addEventListener("click", e => {
         if (!acceptingAnswers) return;
-
+// checks if answer is true or false
         acceptingAnswers = false;
         const selectedAnswer = e.target;
         const selectedButton = selectedAnswer.dataset["number"];
