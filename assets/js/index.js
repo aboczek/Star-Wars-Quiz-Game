@@ -165,7 +165,7 @@ answers.forEach(answer => {
         setTimeout( () => {
             selectedAnswer.parentElement.classList.remove(classToApply);
             getNewQuestion();
-        });
+        }, 1000);
 
         
     });

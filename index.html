@@ -47,15 +47,24 @@
     <div class="game-on" id="game-window">
         <h3>Question:</h3>
         <p id="question">x</p>
-        <button class="btn answer" data-number="1">answer 1</button>
-        <button class="btn answer" data-number="2">answer 2</button>
-        <button class="btn answer" data-number="3">answer 3</button>
+        <div class="btn-answer">
+            <p class="answer" data-number="1">answer 1</p>
+        </div>
+        <div class="btn-answer">
+            <p class="answer" data-number="2">answer 2</p>
+        </div>
+        <div class="btn-answer">
+            <p class="answer">answer 3</p>
+        </div>
+        <!-- <button class="btn answer" data-number="1">answer 1</button> -->
+        <!-- <button class="answer" data-number="2">answer 2</button>
+        <button class="answer" data-number="3">answer 3</button> -->
     </div>
     <!-- Result -->
     <div class="game-off" id="game-result">
-        <span >Score:</span>
+        <span>Score:</span>
         <span id="game-score">0/10</span>
-        <label for="result" >Your Name:</label>
+        <label for="result">Your Name:</label>
         <input type="text" id="result" name="result">
         <button class="btn">Save</button>
         <button class="btn" id="main-menu">Go back to Start</button>
