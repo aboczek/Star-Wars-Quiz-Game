@@ -82,7 +82,7 @@ let questionContainer = [{
 // Declaring all variables to get elements from html file
 const gameBoard = document.getElementById("game-board");
 const playGame = document.getElementById("play-game");
-const highscore = document.getElementById("score-on");
+const leadersBoard = document.getElementById("score-on");
 const rules = document.getElementById("rules");
 const gameWindow = document.getElementById("game-window");
 const question = document.getElementById("question");
@@ -95,16 +95,20 @@ const saveScore = document.getElementById("save-score");
 const userResult = document.getElementById("result");
 // getting score from local storage
 const mostRecentScore = localStorage.getItem("mostRecentScore");
+// saves highscore to localstorage as JSON
+const highScore = JSON.parse(localStorage.getItem("highScore")) || [];
+// sets top 3 leaderboard
+const MAX_HIGH_SCORE = 3;
 
 // Hidding unecessary content from viewing and loading Dom
 window.addEventListener('DOMContentLoaded', () => {
     rules.style.display = "none";
     gameWindow.style.display = "none";
-    highscore.style.display = "none";
+    leadersBoard.style.display = "none";
     gameResult.style.display = "none";
     // listenning to clicks on Play button and Highscore
     playGame.addEventListener("click", startGame);
-    highscore.addEventListener("click", showScore);
+    leadersBoard.addEventListener("click", showScore);
 });
 
 let currentQuestion = {};
@@ -140,7 +144,7 @@ getNewQuestion = () => {
         gameWindow.style.display = "none";
         gameResult.style.display = "flex";
         return;
-        
+
     };
     questionCounter++;
     // increments question number from 1 to 10
@@ -190,7 +194,7 @@ incrementScore = num => {
     score += num;
 };
 
-// disables save button
+// disables save button if no username inserted
 userResult.addEventListener("keyup", () => {
     saveScore.disabled = !userResult.value;
 });
@@ -199,7 +203,19 @@ userResult.addEventListener("keyup", () => {
 gameScore.innerText = mostRecentScore;
 
 // saves the score for highscore
-saveScore.addEventListener("click", saveHighScore);
 saveHighScore = (e) => {
+    e.preventDefault();
 
+    let score = {
+        score: mostRecentScore,
+        name: userResult.value
+    };
+    highScore.push(score);
+    highScore.sort((a, b) => b.score - a.score);
+    highScore.splice(3);
+
+    localStorage.setItem("highScore", JSON.stringify(highScore));
+
+    gameResult.style.display = "none";
+    leadersBoard.style.display = "flex";
 };
