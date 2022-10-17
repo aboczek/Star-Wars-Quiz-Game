@@ -93,6 +93,8 @@ const mainMenu = document.getElementById("main-menu");
 const questionCount = document.getElementById("question-counter");
 const saveScore = document.getElementById("save-score");
 const userResult = document.getElementById("result");
+// getting score from local storage
+const mostRecentScore = localStorage.getItem("mostRecentScore");
 
 // Hidding unecessary content from viewing and loading Dom
 window.addEventListener('DOMContentLoaded', () => {
@@ -194,8 +196,8 @@ userResult.addEventListener("keyup", () => {
 });
 
 // gets score from game from local storage
+gameScore.innerText = mostRecentScore;
 
-gameScore.innerText = mostRecentscore;
 // saves the score for highscore
 saveScore.addEventListener("click", saveHighScore);
 saveHighScore = (e) => {
