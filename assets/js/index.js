@@ -203,9 +203,8 @@ userResult.addEventListener("keyup", () => {
 gameScore.innerText = mostRecentScore;
 
 // saves the score for highscore
-document.getElementById("save-score").onclick = function () {saveHighScore(event)};
+document.getElementById("save-score").onclick = function () {saveHighScore()};
 saveHighScore = (e) => {
-    e.preventDefault();
 
     let score = {
         score: mostRecentScore,
