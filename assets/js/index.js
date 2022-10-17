@@ -134,6 +134,7 @@ getNewQuestion = () => {
         return;
     }
     questionCounter++;
+    // increments question number from 1 to 10
     questionCount.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
 
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
@@ -144,7 +145,7 @@ getNewQuestion = () => {
         number = answer.dataset["number"];
         answer.innerText = currentQuestion["answer" + number];
     });
-
+    // takes question from questions used so it doesnt show them again
     availableQuestions.splice(questionIndex, 1);
     acceptingAnswers = true;
 };
@@ -169,7 +170,5 @@ answers.forEach(answer => {
             selectedAnswer.parentElement.classList.remove(classToApply);
             getNewQuestion();
         }, 1000);
-
-
     });
 });
