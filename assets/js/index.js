@@ -91,6 +91,8 @@ const gameResult = document.getElementById("game-result");
 const gameScore = document.getElementById("game-score");
 const mainMenu = document.getElementById("main-menu");
 const questionCount = document.getElementById("question-counter");
+const saveScore = document.getElementById("save-score");
+const userResult = document.getElementById("result");
 
 // Hidding unecessary content from viewing and loading Dom
 window.addEventListener('DOMContentLoaded', () => {
@@ -109,7 +111,7 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-const CORRECT_BONUS = 10;
+const CORRECT_BONUS = 1;
 const MAX_QUESTIONS = 10;
 
 // // //Starting the rules before game
@@ -131,8 +133,13 @@ startGame = () => {
 // inserts questions in html #question randomly generated from array
 getNewQuestion = () => {
     if (availableQuestions.lenght == 0 || questionCounter >= MAX_QUESTIONS) {
+        localStorage.setItem("mostRecentScore", score);
+        // turns off game window and goes to game result
+        gameWindow.style.display = "none";
+        gameResult.style.display = "flex";
         return;
-    }
+        
+    };
     questionCounter++;
     // increments question number from 1 to 10
     questionCount.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
@@ -159,10 +166,14 @@ answers.forEach(answer => {
         const selectedButton = selectedAnswer.dataset["number"];
 
         // if true it changes to correct if false changes to incorrect
-        let classToApply = 'incorrect';
+        let classToApply = "incorrect";
         if (selectedButton == currentQuestion.correct) {
-            classToApply = 'correct';
+            classToApply = "correct";
         };
+
+        if (classToApply === "correct") {
+            incrementScore(CORRECT_BONUS);
+        }
         // adds class to container if answer is correct or incorrect and will change color accordingly
         selectedAnswer.parentElement.classList.add(classToApply);
 
@@ -172,3 +183,21 @@ answers.forEach(answer => {
         }, 1000);
     });
 });
+// increments score in the background
+incrementScore = num => {
+    score += num;
+};
+
+// disables save button
+userResult.addEventListener("keyup", () => {
+    saveScore.disabled = !userResult.value;
+});
+
+// gets score from game from local storage
+
+gameScore.innerText = mostRecentscore;
+// saves the score for highscore
+saveScore.addEventListener("click", saveHighScore);
+saveHighScore = (e) => {
+
+};
