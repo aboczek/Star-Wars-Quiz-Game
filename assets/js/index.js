@@ -203,6 +203,7 @@ userResult.addEventListener("keyup", () => {
 gameScore.innerText = mostRecentScore;
 
 // saves the score for highscore
+document.getElementById("save-score").onclick = function () {saveHighScore(event)};
 saveHighScore = (e) => {
     e.preventDefault();
 
@@ -213,9 +214,9 @@ saveHighScore = (e) => {
     highScore.push(score);
     highScore.sort((a, b) => b.score - a.score);
     highScore.splice(3);
-
+// saves highscore to local storage
     localStorage.setItem("highScore", JSON.stringify(highScore));
-
+// turns off game result and turns on main menu
     gameResult.style.display = "none";
-    leadersBoard.style.display = "flex";
+    gameBoard.style.display = "flex";
 };
