@@ -137,7 +137,7 @@ startGame = () => {
         gameWindow.style.display = "flex";
     }, 5000);
 };
-
+// highscore button for leaderboard 
 showScore = () => {
     gameBoard.style.display = "none";
     leadersBoard.style.display = "flex";
