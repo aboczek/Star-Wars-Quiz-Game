@@ -83,6 +83,7 @@ let questionContainer = [{
 const gameBoard = document.getElementById("game-board");
 const playGame = document.getElementById("play-game");
 const leadersBoard = document.getElementById("score-on");
+const highScoreBtn = document.getElementById("highscore");
 const rules = document.getElementById("rules");
 const gameWindow = document.getElementById("game-window");
 const question = document.getElementById("question");
@@ -108,7 +109,7 @@ window.addEventListener('DOMContentLoaded', () => {
     gameResult.style.display = "none";
     // listenning to clicks on Play button and Highscore
     playGame.addEventListener("click", startGame);
-    leadersBoard.addEventListener("click", showScore);
+    highScoreBtn.addEventListener("click", showScore);
 });
 
 let currentQuestion = {};
@@ -136,6 +137,11 @@ startGame = () => {
         gameWindow.style.display = "flex";
     }, 5000);
 };
+
+showScore = () => {
+    gameBoard.style.display = "none";
+    leadersBoard.style.display = "flex";
+}
 // inserts questions in html #question randomly generated from array
 getNewQuestion = () => {
     if (availableQuestions.lenght == 0 || questionCounter >= MAX_QUESTIONS) {
@@ -220,4 +226,9 @@ saveHighScore = (e) => {
 // turns off game result and turns on main menu
     gameResult.style.display = "none";
     gameBoard.style.display = "flex";
+};
+
+showScore = () => {
+    gameBoard.style.display = "none";
+    leadersBoard.style.display = "flex";
 };
