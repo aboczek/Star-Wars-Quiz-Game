@@ -97,6 +97,7 @@ const gameScore = document.getElementById("game-score");
 const mainMenu = document.getElementById("main-menu");
 const questionCount = document.getElementById("question-counter");
 const saveScore = document.getElementById("save-score");
+const scoreList = document.getElementById("score-list");
 const userResult = document.getElementById("result");
 // getting score from local storage
 const mostRecentScore = localStorage.getItem("mostRecentScore");
@@ -111,7 +112,7 @@ window.addEventListener('DOMContentLoaded', () => {
     gameWindow.style.display = "none";
     leadersBoard.style.display = "none";
     gameResult.style.display = "none";
-    // listenning to clicks on Play button and Highscore
+    // listenning to clicks on play, highscore, return to main menu
     playGame.addEventListener("click", startGame);
     highScoreBtn.addEventListener("click", showScore);
     returnToMenu.addEventListener("click", returnToMainMenu);
@@ -239,3 +240,10 @@ saveHighScore = (e) => {
     gameResult.style.display = "none";
     gameBoard.style.display = "flex";
 };
+
+
+// Highscore/leaderboard main menu
+scoreList.innerHTML = highScore.map(score => {
+    return `<li class="high-score">${score.name} - ${score.score}</li>`;
+})
+.join("");
