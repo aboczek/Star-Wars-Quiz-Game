@@ -116,6 +116,7 @@ window.addEventListener('DOMContentLoaded', () => {
     playGame.addEventListener("click", startGame);
     highScoreBtn.addEventListener("click", showScore);
     returnToMenu.addEventListener("click", returnToMainMenu);
+    mainMenu.addEventListener("click", returnToMainMenuTwo);
 });
 
 let currentQuestion = {};
@@ -241,6 +242,10 @@ saveHighScore = (e) => {
     gameBoard.style.display = "flex";
 };
 
+returnToMainMenuTwo = () => {
+    gameResult.style.display = "none";
+    gameBoard.style.display = "flex";
+};
 
 // Highscore/leaderboard main menu
 scoreList.innerHTML = highScore.map(score => {
