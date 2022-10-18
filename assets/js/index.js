@@ -81,9 +81,13 @@ let questionContainer = [{
 ];
 // Declaring all variables to get elements from html file
 const gameBoard = document.getElementById("game-board");
+// Play! button in main menu
 const playGame = document.getElementById("play-game");
 const leadersBoard = document.getElementById("score-on");
+// Highscore button in main menu
 const highScoreBtn = document.getElementById("highscore");
+// return button in highscore/leaderboard
+const returnToMenu = document.getElementById("return-to-menu");
 const rules = document.getElementById("rules");
 const gameWindow = document.getElementById("game-window");
 const question = document.getElementById("question");
@@ -110,6 +114,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // listenning to clicks on Play button and Highscore
     playGame.addEventListener("click", startGame);
     highScoreBtn.addEventListener("click", showScore);
+    returnToMenu.addEventListener("click", returnToMainMenu);
 });
 
 let currentQuestion = {};
@@ -137,11 +142,17 @@ startGame = () => {
         gameWindow.style.display = "flex";
     }, 5000);
 };
-// highscore button for leaderboard 
+// highscore button for leaderboard/highscore
 showScore = () => {
     gameBoard.style.display = "none";
     leadersBoard.style.display = "flex";
+};
+// returns from leaderboard/highscore
+returnToMainMenu = () => {
+    gameBoard.style.display = "flex";
+    leadersBoard.style.display = "none";
 }
+
 // inserts questions in html #question randomly generated from array
 getNewQuestion = () => {
     if (availableQuestions.lenght == 0 || questionCounter >= MAX_QUESTIONS) {
