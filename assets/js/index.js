@@ -94,6 +94,7 @@ const question = document.getElementById("question");
 const answers = Array.from(document.getElementsByClassName("answer"));
 const gameResult = document.getElementById("game-result");
 const gameScore = document.getElementById("game-score");
+// main menu button from game result 
 const mainMenu = document.getElementById("main-menu");
 const questionCount = document.getElementById("question-counter");
 const saveScore = document.getElementById("save-score");
