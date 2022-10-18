@@ -230,6 +230,7 @@ saveHighScore = (e) => {
         name: userResult.value
     };
     highScore.push(score);
+    // makes highscore go form highest to lowest
     highScore.sort((a, b) => b.score - a.score);
     highScore.splice(3);
 // saves highscore to local storage
@@ -237,9 +238,4 @@ saveHighScore = (e) => {
 // turns off game result and turns on main menu
     gameResult.style.display = "none";
     gameBoard.style.display = "flex";
-};
-
-showScore = () => {
-    gameBoard.style.display = "none";
-    leadersBoard.style.display = "flex";
 };
