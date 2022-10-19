@@ -158,13 +158,12 @@ returnToMainMenu = () => {
 
 // inserts questions in html #question randomly generated from array
 getNewQuestion = () => {
-    if (availableQuestions.lenght == 0 || questionCounter >= MAX_QUESTIONS) {
+    if (availableQuestions.lenght === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score);
         // turns off game window and goes to game result
         gameWindow.style.display = "none";
         gameResult.style.display = "flex";
         return;
-
     };
     questionCounter++;
     // increments question number from 1 to 10
@@ -223,12 +222,14 @@ userResult.addEventListener("keyup", () => {
 gameScore.innerText = mostRecentScore;
 
 // adds function saveHighScore(event) to html
-document.getElementById("save-score").addEventListener("click", function(event) { saveHighScore(event); });
+document.getElementById("save-score").addEventListener("click", function (event) {
+    saveHighScore(event);
+});
 // saves the score for highscore
 saveHighScore = (e) => {
     e.preventDefault();
 
-    let score = {
+    const score = {
         score: mostRecentScore,
         name: userResult.value
     };
@@ -236,13 +237,13 @@ saveHighScore = (e) => {
     // makes highscore go form highest to lowest
     highScore.sort((a, b) => b.score - a.score);
     highScore.splice(3);
-// saves highscore to local storage
+    // saves highscore to local storage
     localStorage.setItem("highScore", JSON.stringify(highScore));
-// turns off game result and turns on main menu
+    // turns off game result and turns on main menu
     gameResult.style.display = "none";
     gameBoard.style.display = "flex";
 };
-
+// returns to main menu from game result
 returnToMainMenuTwo = () => {
     gameResult.style.display = "none";
     gameBoard.style.display = "flex";
@@ -250,6 +251,6 @@ returnToMainMenuTwo = () => {
 
 // Highscore/leaderboard main menu
 scoreList.innerHTML = highScore.map(score => {
-    return `<li class="high-score">${score.name} - ${score.score}</li>`;
-})
-.join("");
+        return `<li class="high-score">${score.name} - ${score.score}</li>`;
+    })
+    .join("");
