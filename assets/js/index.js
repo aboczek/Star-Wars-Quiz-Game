@@ -129,8 +129,8 @@ let availableQuestions = [];
 const CORRECT_BONUS = 1;
 const MAX_QUESTIONS = 10;
 
-// // //Starting the rules before game
 
+// Starting game, rules are displayed first.
 startGame = () => {
     questionCounter = 0;
     score = 0;
@@ -165,6 +165,7 @@ getNewQuestion = () => {
         gameResult.style.display = "flex";
         return;
     };
+
     questionCounter++;
     // increments question number from 1 to 10
     questionCount.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
@@ -218,8 +219,9 @@ userResult.addEventListener("keyup", () => {
     saveScore.disabled = !userResult.value;
 });
 
-// gets score from game from local storage
+// // gets score from game from local storage
 gameScore.innerText = mostRecentScore;
+
 
 // adds function saveHighScore(event) to html
 document.getElementById("save-score").addEventListener("click", function (event) {
