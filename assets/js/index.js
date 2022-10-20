@@ -1,6 +1,3 @@
-// Questions and answers
-
-
 const gameBoard = document.querySelector("#game-board");
 const playGame = document.querySelector("#play-game");
 const leadersBoard = document.querySelector("#score-on");
@@ -28,8 +25,8 @@ let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
-let currentQuestion = {};
 let questionContainer = []
+let currentQuestion = {};
 
 
 fetch("assets/json/questions.json")
@@ -68,7 +65,7 @@ const returnToMainMenu = () => {
 const getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score);
-
+        gameScoreFunction();
         gameWindow.style.display = "none";
         gameResult.style.display = "flex";
         return;
@@ -127,9 +124,9 @@ userResult.addEventListener("keyup", () => {
     saveScore.disabled = !userResult.value;
 });
 
-
-gameScore.innerText = mostRecentScore;
-
+const gameScoreFunction = () => {
+gameScore.innerText = window.localStorage.getItem("mostRecentScore");
+};
 
 
 document.getElementById("save-score").addEventListener("click", function (event) {
@@ -140,9 +137,14 @@ const saveHighScore = (e) => {
     e.preventDefault();
 
     const score = {
-        score: mostRecentScore,
-        name: userResult.value
-    };
+    score: window.localStorage.getItem("mostRecentScore"),
+    name: userResult.value
+    }
+    
+    // let score = {
+    //     score: mostRecentScore,
+    //     name: userResult.value
+    // };
     highScore.push(score);
 
     highScore.sort((a, b) => b.score - a.score);
