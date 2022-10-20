@@ -80,22 +80,22 @@ let questionContainer = [{
     },
 ];
 
-const gameBoard = document.querySelector(".game-board");
-const playGame = document.querySelector(".play-game");
-const leadersBoard = document.querySelector(".score-on");
-const highScoreBtn = document.querySelector(".highscore");
-const returnToMenu = document.querySelector(".return-to-menu");
-const rules = document.querySelector(".rules");
-const gameWindow = document.querySelector(".game-window");
-const question = document.querySelector(".question");
+const gameBoard = document.querySelector("#game-board");
+const playGame = document.querySelector("#play-game");
+const leadersBoard = document.querySelector("#score-on");
+const highScoreBtn = document.querySelector("#highscore");
+const returnToMenu = document.querySelector("#return-to-menu");
+const rules = document.querySelector("#rules");
+const gameWindow = document.querySelector("#game-window");
+const question = document.querySelector("#question");
 const answers = Array.from(document.getElementsByClassName("answer"));
-const gameResult = document.querySelector(".game-result");
-const gameScore = document.querySelector(".game-score");
-const mainMenu = document.querySelector(".main-menu");
-const questionCount = document.querySelector(".question-counter");
-const saveScore = document.querySelector(".save-score");
-const scoreList = document.querySelector(".score-list");
-const userResult = document.querySelector(".result");
+const gameResult = document.querySelector("#game-result");
+const gameScore = document.querySelector("#game-score");
+const mainMenu = document.querySelector("#main-menu");
+const questionCount = document.querySelector("#question-counter");
+const saveScore = document.querySelector("#save-score");
+const scoreList = document.querySelector("#score-list");
+const userResult = document.querySelector("#result");
 const mostRecentScore = localStorage.getItem("mostRecentScore");
 const highScore = JSON.parse(localStorage.getItem("highScore")) || [];
 
