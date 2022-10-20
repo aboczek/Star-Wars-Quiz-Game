@@ -80,22 +80,22 @@ let questionContainer = [{
     },
 ];
 
-const gameBoard = document.getElementById("game-board");
-const playGame = document.getElementById("play-game");
-const leadersBoard = document.getElementById("score-on");
-const highScoreBtn = document.getElementById("highscore");
-const returnToMenu = document.getElementById("return-to-menu");
-const rules = document.getElementById("rules");
-const gameWindow = document.getElementById("game-window");
-const question = document.getElementById("question");
+const gameBoard = document.querySelector(".game-board");
+const playGame = document.querySelector(".play-game");
+const leadersBoard = document.querySelector(".score-on");
+const highScoreBtn = document.querySelector(".highscore");
+const returnToMenu = document.querySelector(".return-to-menu");
+const rules = document.querySelector(".rules");
+const gameWindow = document.querySelector(".game-window");
+const question = document.querySelector(".question");
 const answers = Array.from(document.getElementsByClassName("answer"));
-const gameResult = document.getElementById("game-result");
-const gameScore = document.getElementById("game-score");
-const mainMenu = document.getElementById("main-menu");
-const questionCount = document.getElementById("question-counter");
-const saveScore = document.getElementById("save-score");
-const scoreList = document.getElementById("score-list");
-const userResult = document.getElementById("result");
+const gameResult = document.querySelector(".game-result");
+const gameScore = document.querySelector(".game-score");
+const mainMenu = document.querySelector(".main-menu");
+const questionCount = document.querySelector(".question-counter");
+const saveScore = document.querySelector(".save-score");
+const scoreList = document.querySelector(".score-list");
+const userResult = document.querySelector(".result");
 const mostRecentScore = localStorage.getItem("mostRecentScore");
 const highScore = JSON.parse(localStorage.getItem("highScore")) || [];
 
@@ -154,7 +154,7 @@ const returnToMainMenu = () => {
 const getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score);
-        // turns off game window and goes to game result
+
         gameWindow.style.display = "none";
         gameResult.style.display = "flex";
         return;
