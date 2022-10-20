@@ -79,14 +79,11 @@ let questionContainer = [{
         correct: 2
     },
 ];
-// Declaring all variables to get elements from html file
+
 const gameBoard = document.getElementById("game-board");
-// Play! button in main menu
 const playGame = document.getElementById("play-game");
 const leadersBoard = document.getElementById("score-on");
-// Highscore button in main menu
 const highScoreBtn = document.getElementById("highscore");
-// return button in highscore/leaderboard
 const returnToMenu = document.getElementById("return-to-menu");
 const rules = document.getElementById("rules");
 const gameWindow = document.getElementById("game-window");
@@ -94,18 +91,25 @@ const question = document.getElementById("question");
 const answers = Array.from(document.getElementsByClassName("answer"));
 const gameResult = document.getElementById("game-result");
 const gameScore = document.getElementById("game-score");
-// main menu button from game result 
 const mainMenu = document.getElementById("main-menu");
 const questionCount = document.getElementById("question-counter");
 const saveScore = document.getElementById("save-score");
 const scoreList = document.getElementById("score-list");
 const userResult = document.getElementById("result");
-// getting score from local storage
 const mostRecentScore = localStorage.getItem("mostRecentScore");
-// saves highscore to localstorage as JSON
 const highScore = JSON.parse(localStorage.getItem("highScore")) || [];
-// sets top 3 leaderboard
+
 const MAX_HIGH_SCORE = 3;
+const CORRECT_BONUS = 1;
+const MAX_QUESTIONS = 10;
+
+let acceptingAnswers = false;
+let score = 0;
+let questionCounter = 0;
+let availableQuestions = [];
+let currentQuestion = {};
+
+
 
 // Hidding unecessary content from viewing and loading Dom
 window.addEventListener('DOMContentLoaded', () => {
@@ -120,45 +124,35 @@ window.addEventListener('DOMContentLoaded', () => {
     mainMenu.addEventListener("click", returnToMainMenuTwo);
 });
 
-let currentQuestion = {};
-let acceptingAnswers = false;
-let score = 0;
-let questionCounter = 0;
-let availableQuestions = [];
-
-const CORRECT_BONUS = 1;
-const MAX_QUESTIONS = 10;
 
 
-// Starting game, rules are displayed first.
-startGame = () => {
+
+const startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questionContainer];
     getNewQuestion();
-    // hides main game board and shows rules
     rules.style.display = "flex";
     gameBoard.style.display = "none";
-    // hides rules and shows game window for questions with 5 seconds timeout on rules
     setTimeout(function () {
         rules.style.display = "none"
         gameWindow.style.display = "flex";
     }, 5000);
 };
-// highscore button for leaderboard/highscore
-showScore = () => {
+
+const showScore = () => {
     gameBoard.style.display = "none";
     leadersBoard.style.display = "flex";
 };
-// returns from leaderboard/highscore
-returnToMainMenu = () => {
+
+const returnToMainMenu = () => {
     gameBoard.style.display = "flex";
     leadersBoard.style.display = "none";
 }
 
-// inserts questions in html #question randomly generated from array
-getNewQuestion = () => {
-    if (availableQuestions.lenght === 0 || questionCounter >= MAX_QUESTIONS) {
+
+const getNewQuestion = () => {
+    if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score);
         // turns off game window and goes to game result
         gameWindow.style.display = "none";
@@ -167,31 +161,31 @@ getNewQuestion = () => {
     };
 
     questionCounter++;
-    // increments question number from 1 to 10
+
     questionCount.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
 
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
-    // inserts answers to buttons in html
+
     answers.forEach((answer) => {
         number = answer.dataset["number"];
         answer.innerText = currentQuestion["answer" + number];
     });
-    // takes question from questions used so it doesnt show them again
+
     availableQuestions.splice(questionIndex, 1);
     acceptingAnswers = true;
 };
-// gets new question after selecting answer
+
 answers.forEach(answer => {
     answer.addEventListener("click", e => {
         if (!acceptingAnswers) return;
-        // checks if answer is true or false
+
         acceptingAnswers = false;
         const selectedAnswer = e.target;
         const selectedButton = selectedAnswer.dataset["number"];
 
-        // if true it changes to correct if false changes to incorrect
+
         let classToApply = "incorrect";
         if (selectedButton == currentQuestion.correct) {
             classToApply = "correct";
@@ -200,7 +194,7 @@ answers.forEach(answer => {
         if (classToApply === "correct") {
             incrementScore(CORRECT_BONUS);
         }
-        // adds class to container if answer is correct or incorrect and will change color accordingly
+
         selectedAnswer.parentElement.classList.add(classToApply);
 
         setTimeout(() => {
@@ -209,26 +203,26 @@ answers.forEach(answer => {
         }, 1000);
     });
 });
-// increments score in the background
-incrementScore = num => {
+
+const incrementScore = num => {
     score += num;
 };
 
-// disables save button if no username inserted
+
 userResult.addEventListener("keyup", () => {
     saveScore.disabled = !userResult.value;
 });
 
-// // gets score from game from local storage
+
 gameScore.innerText = mostRecentScore;
 
 
-// adds function saveHighScore(event) to html
+
 document.getElementById("save-score").addEventListener("click", function (event) {
     saveHighScore(event);
 });
-// saves the score for highscore
-saveHighScore = (e) => {
+
+const saveHighScore = (e) => {
     e.preventDefault();
 
     const score = {
@@ -236,22 +230,22 @@ saveHighScore = (e) => {
         name: userResult.value
     };
     highScore.push(score);
-    // makes highscore go form highest to lowest
+
     highScore.sort((a, b) => b.score - a.score);
     highScore.splice(3);
-    // saves highscore to local storage
+
     localStorage.setItem("highScore", JSON.stringify(highScore));
-    // turns off game result and turns on main menu
-    gameResult.style.display = "none";
-    gameBoard.style.display = "flex";
-};
-// returns to main menu from game result
-returnToMainMenuTwo = () => {
+
     gameResult.style.display = "none";
     gameBoard.style.display = "flex";
 };
 
-// Highscore/leaderboard main menu
+const returnToMainMenuTwo = () => {
+    gameResult.style.display = "none";
+    gameBoard.style.display = "flex";
+};
+
+
 scoreList.innerHTML = highScore.map(score => {
         return `<li class="high-score">${score.name} - ${score.score}</li>`;
     })
