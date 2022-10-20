@@ -14,7 +14,6 @@ const questionCount = document.querySelector("#question-counter");
 const saveScore = document.querySelector("#save-score");
 const scoreList = document.querySelector("#score-list");
 const userResult = document.querySelector("#result");
-const mostRecentScore = localStorage.getItem("mostRecentScore");
 const highScore = JSON.parse(localStorage.getItem("highScore")) || [];
 
 const MAX_HIGH_SCORE = 3;
@@ -129,7 +128,7 @@ gameScore.innerText = window.localStorage.getItem("mostRecentScore");
 };
 
 
-document.getElementById("save-score").addEventListener("click", function (event) {
+document.querySelector("#save-score").addEventListener("click", function (event) {
     saveHighScore(event);
 });
 
@@ -142,7 +141,6 @@ const saveHighScore = (e) => {
     }
     
     highScore.push(score);
-
     highScore.sort((a, b) => b.score - a.score);
     highScore.splice(3);
 
@@ -160,11 +158,7 @@ const returnToMainMenuTwo = () => {
     gameBoard.style.display = "flex";
 };
 
- 
-
-
-
-window.addEventListener('DOMContentLoaded', () => {
+ window.addEventListener('DOMContentLoaded', () => {
     rules.style.display = "none";
     gameWindow.style.display = "none";
     leadersBoard.style.display = "none";
