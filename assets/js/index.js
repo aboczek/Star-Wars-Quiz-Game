@@ -141,10 +141,6 @@ const saveHighScore = (e) => {
     name: userResult.value
     }
     
-    // let score = {
-    //     score: mostRecentScore,
-    //     name: userResult.value
-    // };
     highScore.push(score);
 
     highScore.sort((a, b) => b.score - a.score);
@@ -154,6 +150,9 @@ const saveHighScore = (e) => {
 
     gameResult.style.display = "none";
     gameBoard.style.display = "flex";
+    scoreList.innerHTML = highScore.map(score => {
+    return `<li class="high-score">${score.name} - ${score.score}</li>`;
+}).join("");
 };
 
 const returnToMainMenuTwo = () => {
@@ -161,10 +160,7 @@ const returnToMainMenuTwo = () => {
     gameBoard.style.display = "flex";
 };
 
-
-scoreList.innerHTML = highScore.map(score => {
-    return `<li class="high-score">${score.name} - ${score.score}</li>`;
-}).join("");
+ 
 
 
 
