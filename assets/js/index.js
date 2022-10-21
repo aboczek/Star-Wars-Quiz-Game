@@ -56,7 +56,6 @@ const showScore = () => {
     scoreList.innerHTML = highScore.map(score => {
         return `<li class="high-score">${score.name} - ${score.score}</li>`;
     }).join("");
-    
 };
 
 const returnToMainMenu = () => {
@@ -75,7 +74,6 @@ const getNewQuestion = () => {
     };
 
     questionCounter++;
-
     questionCount.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
 
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
@@ -89,46 +87,47 @@ const getNewQuestion = () => {
 
     availableQuestions.splice(questionIndex, 1);
     acceptingAnswers = true;
+    answersCorrect();
 };
+const answersCorrect = () => {
+    answers.forEach(answer => {
+        answer.addEventListener("click", e => {
+            if (!acceptingAnswers) return;
 
-answers.forEach(answer => {
-    answer.addEventListener("click", e => {
-        if (!acceptingAnswers) return;
-
-        acceptingAnswers = false;
-        const selectedAnswer = e.target;
-        const selectedButton = selectedAnswer.dataset["number"];
+            acceptingAnswers = false;
+            const selectedAnswer = e.target;
+            const selectedButton = selectedAnswer.dataset["number"];
 
 
-        let classToApply = "incorrect";
-        if (selectedButton == currentQuestion.correct) {
-            classToApply = "correct";
-        };
+            let classToApply = "incorrect";
+            if (selectedButton == currentQuestion.correct) {
+                classToApply = "correct";
+            };
 
-        if (classToApply === "correct") {
-            incrementScore(CORRECT_BONUS);
-        }
+            if (classToApply === "correct") {
+                incrementScore(CORRECT_BONUS);
+            }
 
-        selectedAnswer.parentElement.classList.add(classToApply);
+            selectedAnswer.parentElement.classList.add(classToApply);
 
-        setTimeout(() => {
-            selectedAnswer.parentElement.classList.remove(classToApply);
-            getNewQuestion();
-        }, 1000);
+            setTimeout(() => {
+                selectedAnswer.parentElement.classList.remove(classToApply);
+                getNewQuestion();
+            }, 1000);
+        });
     });
-});
 
-const incrementScore = num => {
-    score += num;
+    const incrementScore = num => {
+        score += num;
+    };
 };
-
 
 userResult.addEventListener("keyup", () => {
     saveScore.disabled = !userResult.value;
 });
 
 const gameScoreFunction = () => {
-gameScore.innerText = window.localStorage.getItem("mostRecentScore");
+    gameScore.innerText = window.localStorage.getItem("mostRecentScore");
 };
 
 
@@ -140,10 +139,10 @@ const saveHighScore = (e) => {
     e.preventDefault();
 
     const score = {
-    score: window.localStorage.getItem("mostRecentScore"),
-    name: userResult.value
+        score: window.localStorage.getItem("mostRecentScore"),
+        name: userResult.value
     }
-    
+
     highScore.push(score);
     highScore.sort((a, b) => b.score - a.score);
     highScore.splice(3);
@@ -152,19 +151,14 @@ const saveHighScore = (e) => {
 
     gameResult.style.display = "none";
     gameBoard.style.display = "flex";
-
-    
 };
 
-// scoreList.innerHTML = highScore.map(score => {
-//     return `<li class="high-score">${score.name} - ${score.score}</li>`;
-// }).join("");
 const returnToMainMenuTwo = () => {
     gameResult.style.display = "none";
     gameBoard.style.display = "flex";
 };
 
- window.addEventListener('DOMContentLoaded', () => {;
+window.addEventListener('DOMContentLoaded', () => {
     // listenning to clicks on play, highscore, return to main menu
     playGame.addEventListener("click", startGame);
     highScoreBtn.addEventListener("click", showScore);
