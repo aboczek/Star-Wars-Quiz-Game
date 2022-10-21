@@ -118,8 +118,9 @@ body {
     backdrop-filter: blur(10px);
 }
 
-.score-list {
-    margin-top: 0.7rem;
+#score-list {
+    margin: 0.7rem auto 0 auto;
+    font-size: 2rem;
 }
 
 #score-on {
