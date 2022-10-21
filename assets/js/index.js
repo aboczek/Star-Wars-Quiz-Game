@@ -158,11 +158,7 @@ const returnToMainMenuTwo = () => {
     gameBoard.style.display = "flex";
 };
 
- window.addEventListener('DOMContentLoaded', () => {
-    rules.style.display = "none";
-    gameWindow.style.display = "none";
-    leadersBoard.style.display = "none";
-    gameResult.style.display = "none";
+ window.addEventListener('DOMContentLoaded', () => {;
     // listenning to clicks on play, highscore, return to main menu
     playGame.addEventListener("click", startGame);
     highScoreBtn.addEventListener("click", showScore);
