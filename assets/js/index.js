@@ -147,7 +147,7 @@ const saveHighScore = (e) => {
     highScore.splice(3);
 
     localStorage.setItem("highScore", JSON.stringify(highScore));
-
+    userResultRef.value = "";
     gameResultRef.style.display = "none";
     gameBoardRef.style.display = "flex";
 };
