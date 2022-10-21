@@ -1,19 +1,19 @@
-const gameBoard = document.querySelector("#game-board");
-const playGame = document.querySelector("#play-game");
-const leadersBoard = document.querySelector("#score-on");
-const highScoreBtn = document.querySelector("#highscore");
-const returnToMenu = document.querySelector("#return-to-menu");
-const rules = document.querySelector("#rules");
-const gameWindow = document.querySelector("#game-window");
-const question = document.querySelector("#question");
-const answers = Array.from(document.getElementsByClassName("answer"));
-const gameResult = document.querySelector("#game-result");
-const gameScore = document.querySelector("#game-score");
-const mainMenu = document.querySelector("#main-menu");
-const questionCount = document.querySelector("#question-counter");
-const saveScore = document.querySelector("#save-score");
-const scoreList = document.querySelector("#score-list");
-const userResult = document.querySelector("#result");
+const gameBoardRef = document.querySelector("#game-board");
+const playGameRef = document.querySelector("#play-game");
+const leadersBoardRef = document.querySelector("#score-on");
+const highScoreBtnRef = document.querySelector("#highscore");
+const returnToMenuRef = document.querySelector("#return-to-menu");
+const rulesRef = document.querySelector("#rules");
+const gameWindowRef = document.querySelector("#game-window");
+const questionRef = document.querySelector("#question");
+const answersRef = Array.from(document.querySelectorAll(".answer"));
+const gameResultRef = document.querySelector("#game-result");
+const gameScoreRef = document.querySelector("#game-score");
+const mainMenuRef = document.querySelector("#main-menu");
+const questionCountRef = document.querySelector("#question-counter");
+const saveScoreRef = document.querySelector("#save-score");
+const scoreListRef = document.querySelector("#score-list");
+const userResultRef = document.querySelector("#result");
 const highScore = JSON.parse(localStorage.getItem("highScore")) || [];
 
 const MAX_HIGH_SCORE = 3;
@@ -42,25 +42,25 @@ const startGame = () => {
     score = 0;
     availableQuestions = [...questionContainer];
     getNewQuestion();
-    rules.style.display = "flex";
-    gameBoard.style.display = "none";
+    rulesRef.style.display = "flex";
+    gameBoardRef.style.display = "none";
     setTimeout(function () {
-        rules.style.display = "none"
-        gameWindow.style.display = "flex";
+        rulesRef.style.display = "none"
+        gameWindowRef.style.display = "flex";
     }, 5000);
 };
 
 const showScore = () => {
-    gameBoard.style.display = "none";
-    leadersBoard.style.display = "flex";
-    scoreList.innerHTML = highScore.map(score => {
+    gameBoardRef.style.display = "none";
+    leadersBoardRef.style.display = "flex";
+    scoreListRef.innerHTML = highScore.map(score => {
         return `<li class="high-score">${score.name} - ${score.score}</li>`;
     }).join("");
 };
 
 const returnToMainMenu = () => {
-    gameBoard.style.display = "flex";
-    leadersBoard.style.display = "none";
+    gameBoardRef.style.display = "flex";
+    leadersBoardRef.style.display = "none";
 }
 
 const getNewQuestion = () => {
@@ -68,19 +68,19 @@ const getNewQuestion = () => {
         localStorage.setItem("mostRecentScore", score);
         gameScoreFunction();
         saveScoreBtn();
-        gameWindow.style.display = "none";
-        gameResult.style.display = "flex";
+        gameWindowRef.style.display = "none";
+        gameResultRef.style.display = "flex";
         return;
     };
 
     questionCounter++;
-    questionCount.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
+    questionCountRef.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
 
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
-    question.innerText = currentQuestion.question;
+    questionRef.innerText = currentQuestion.question;
 
-    answers.forEach((answer) => {
+    answersRef.forEach((answer) => {
         number = answer.dataset["number"];
         answer.innerText = currentQuestion["answer" + number];
     });
@@ -90,7 +90,7 @@ const getNewQuestion = () => {
     answersCorrect();
 };
 const answersCorrect = () => {
-    answers.forEach(answer => {
+    answersRef.forEach(answer => {
         answer.addEventListener("click", e => {
             if (!acceptingAnswers) return;
 
@@ -121,12 +121,12 @@ const incrementScore = num => {
     score += num;
 };
 
-userResult.addEventListener("keyup", () => {
-    saveScore.disabled = !userResult.value;
+userResultRef.addEventListener("keyup", () => {
+    saveScoreRef.disabled = !userResultRef.value;
 });
 
 const gameScoreFunction = () => {
-    gameScore.innerText = window.localStorage.getItem("mostRecentScore");
+    gameScoreRef.innerText = window.localStorage.getItem("mostRecentScore");
 };
 const saveScoreBtn = () => {
     document.querySelector("#save-score").addEventListener("click", function (event) {
@@ -139,7 +139,7 @@ const saveHighScore = (e) => {
 
     const score = {
         score: window.localStorage.getItem("mostRecentScore"),
-        name: userResult.value
+        name: userResultRef.value
     }
 
     highScore.push(score);
@@ -148,21 +148,19 @@ const saveHighScore = (e) => {
 
     localStorage.setItem("highScore", JSON.stringify(highScore));
 
-    gameResult.style.display = "none";
-    gameBoard.style.display = "flex";
+    gameResultRef.style.display = "none";
+    gameBoardRef.style.display = "flex";
 };
 
 const returnToMainMenuTwo = () => {
-    gameResult.style.display = "none";
-    gameBoard.style.display = "flex";
+    gameResultRef.style.display = "none";
+    gameBoardRef.style.display = "flex";
 };
-
-
 
 window.addEventListener('DOMContentLoaded', () => {
     // listenning to clicks on play, highscore, return to main menu
-    playGame.addEventListener("click", startGame);
-    highScoreBtn.addEventListener("click", showScore);
-    returnToMenu.addEventListener("click", returnToMainMenu);
-    mainMenu.addEventListener("click", returnToMainMenuTwo);
+    playGameRef.addEventListener("click", startGame);
+    highScoreBtnRef.addEventListener("click", showScore);
+    returnToMenuRef.addEventListener("click", returnToMainMenu);
+    mainMenuRef.addEventListener("click", returnToMainMenuTwo);
 });
