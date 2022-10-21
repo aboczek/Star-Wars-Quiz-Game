@@ -144,6 +144,7 @@ body {
 
 #game-result > input {
     margin-top: 1rem;
+    height: 1.5rem;
 }
 
 #question {

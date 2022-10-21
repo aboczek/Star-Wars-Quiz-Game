@@ -53,6 +53,10 @@ const startGame = () => {
 const showScore = () => {
     gameBoard.style.display = "none";
     leadersBoard.style.display = "flex";
+    scoreList.innerHTML = highScore.map(score => {
+        return `<li class="high-score">${score.name} - ${score.score}</li>`;
+    }).join("");
+    
 };
 
 const returnToMainMenu = () => {
@@ -148,11 +152,13 @@ const saveHighScore = (e) => {
 
     gameResult.style.display = "none";
     gameBoard.style.display = "flex";
-    scoreList.innerHTML = highScore.map(score => {
-    return `<li class="high-score">${score.name} - ${score.score}</li>`;
-}).join("");
+
+    
 };
 
+// scoreList.innerHTML = highScore.map(score => {
+//     return `<li class="high-score">${score.name} - ${score.score}</li>`;
+// }).join("");
 const returnToMainMenuTwo = () => {
     gameResult.style.display = "none";
     gameBoard.style.display = "flex";
