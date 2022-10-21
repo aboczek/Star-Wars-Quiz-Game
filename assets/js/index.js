@@ -63,11 +63,11 @@ const returnToMainMenu = () => {
     leadersBoard.style.display = "none";
 }
 
-
 const getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score);
         gameScoreFunction();
+        saveScoreBtn();
         gameWindow.style.display = "none";
         gameResult.style.display = "flex";
         return;
@@ -116,10 +116,9 @@ const answersCorrect = () => {
             }, 1000);
         });
     });
-
-    const incrementScore = num => {
-        score += num;
-    };
+};
+const incrementScore = num => {
+    score += num;
 };
 
 userResult.addEventListener("keyup", () => {
@@ -129,11 +128,11 @@ userResult.addEventListener("keyup", () => {
 const gameScoreFunction = () => {
     gameScore.innerText = window.localStorage.getItem("mostRecentScore");
 };
-
-
-document.querySelector("#save-score").addEventListener("click", function (event) {
-    saveHighScore(event);
-});
+const saveScoreBtn = () => {
+    document.querySelector("#save-score").addEventListener("click", function (event) {
+        saveHighScore(event);
+    });
+};
 
 const saveHighScore = (e) => {
     e.preventDefault();
@@ -157,6 +156,8 @@ const returnToMainMenuTwo = () => {
     gameResult.style.display = "none";
     gameBoard.style.display = "flex";
 };
+
+
 
 window.addEventListener('DOMContentLoaded', () => {
     // listenning to clicks on play, highscore, return to main menu
