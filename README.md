@@ -63,13 +63,29 @@ Main purpose of this project is to be little game where you choose correct answe
 - Colors:
     - Colors used on the website are:
 
-    - **placeholder**
+    - White #fff
+    - <img src="documentation/white.png" width="100">
+
+    - Blue #00ccff
+    - <img src="documentation/light-blue-color.png" width="100">
+
+    - Red #FF6B6B
+    - <img src="documentation/red.png" width="100">
+
+    - Green #2FFF7C
+    - <img src="documentation/green.png" width="100">
+
+    - Grey #838383
+    - <img src="documentation/grey.png" width="100">
 
 - Fonts
-    - **placeholder**
+    - Font used is [Kanit](https://fonts.google.com/specimen/Kanit?query=Kanit) from google fonts its main font in entire project.
+    Back up font is "sans-serif".
 
 - Image 
-    - **placeholder**
+    - Background image was taken from [allmacwallpaper](https://www.allmacwallpaper.com/macbook-air-wallpaper/dark-starry-sky-stars-4k/22301) and is used for educational purpose only.
+    - Star Wars logo was taken from [stickpng](https://www.stickpng.com/img/icons-logos-emojis/iconic-brands/star-wars-logo-yellow) and is used for educational purpose only.
+
 
 [Back to top](#star-wars--quiz-game)
 
@@ -125,7 +141,7 @@ Main purpose of this project is to be little game where you choose correct answe
 
 - [screenfly](https://screenfly.org/)
     - Testing My website on it.
-
+    
 # Features
 
 1. Responsive on all devices.
@@ -216,6 +232,10 @@ Following writing the code then commiting and pushing to GitHub, this project wa
 - [AmIresponsive](https://ui.dev/amiresponsive) for responsive look of my website.
 - [Autoprefixer](https://autoprefixer.github.io/) used to prefix CSS.
 - [Big Quiz Thing](https://bigquizthing.com/blog-post/star-wars-trivia-questions-for-fun-game-night/) Questions for quiz.
+- [AllMacWallpaper](https://www.allmacwallpaper.com/macbook-air-wallpaper/dark-starry-sky-stars-4k/22301) background picture was taken from there.
+- [Colorhexa](https://www.colorhexa.com/) was used to take colors from for readme.
+- []()
+
 
 [Back to top](#gourmet-restaurant-portfolio-project-1)
 
