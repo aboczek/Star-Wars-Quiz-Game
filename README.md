@@ -161,6 +161,9 @@ and put into highscore.
 
 - [screenfly](https://screenfly.org/)
     - Testing My website on it.
+
+- [Fonts Awesome](https://fontawesome.com/)
+    - Used for fonts in project.
     
 # Features
 
