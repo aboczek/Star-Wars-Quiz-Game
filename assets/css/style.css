@@ -181,22 +181,6 @@ footer {
 }
 
 @media (min-width: 768px) {
-    #rules {
-        font-size: 2rem;
-    }
-
-    .inner-rules,
-    .answer,
-    #game-score,
-    #question,
-    #bg-text,
-    #question-counter {
-        font-size: 2rem;
-    }
-    #game-result label {
-        font-size: 2rem;
-    }
-
     footer {
         padding-bottom: 5px;
     }
