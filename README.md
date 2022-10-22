@@ -174,13 +174,37 @@ and put into highscore.
 ## Navigation
 
 - Mobile
-    - <img src="" alt="">
+    - <img src="documentation/mobile-main-menu-nav.png" alt="mobile main menu">
+
+    - <img src="documentation/mobile-rules-nav.png" alt="mobile rules before game starts">
+
+    - <img src="documentation/mobile-questions-nav.png" alt="questions displayed">
+
+    - <img src="documentation/mobile-game-result-nav.png" alt="game result showing score">
+
+    - <img src="documentation/mobile-highscore-nav.png" alt="highscore">
 
 - Tablet 
-    - **Placeholder**
+    - <img src="" alt="">
+
+    - <img src="" alt="">
+
+    - <img src="" alt="">
+
+    - <img src="" alt="">
+
+    - <img src="" alt="">
 
 - Desktop
-    - **Placeholder**
+    - <img src="" alt="">
+
+    - <img src="" alt="">
+
+    - <img src="" alt="">
+
+    - <img src="" alt="">
+
+    - <img src="" alt="">
 
 [Back to top](#star-wars--quiz-game)
 
