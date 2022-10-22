@@ -176,6 +176,30 @@ footer {
     height: 2.5rem;
 }
 
+.link-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 2.5rem;
+}
+
+#github {
+    color: var(--white);
+    margin-right: 2rem;
+}
+
+#linkedin {
+    color: var(--white);
+}
+
+#github:hover, #linkedin:hover {
+    color: var(--grey);
+}
+
 
 
 @media (min-width: 468px) {
