@@ -174,37 +174,37 @@ and put into highscore.
 ## Navigation
 
 - Mobile
-    - <img src="documentation/mobile-main-menu-nav.png" alt="mobile main menu">
+    - <img src="documentation/mobile-main-menu-nav.png" alt="mobile main menu" width="400">
 
-    - <img src="documentation/mobile-rules-nav.png" alt="mobile rules before game starts">
+    - <img src="documentation/mobile-rules-nav.png" alt="mobile rules before game starts" width="400">
 
-    - <img src="documentation/mobile-questions-nav.png" alt="questions displayed">
+    - <img src="documentation/mobile-questions-nav.png" alt="questions displayed" width="400">
 
-    - <img src="documentation/mobile-game-result-nav.png" alt="game result showing score">
+    - <img src="documentation/mobile-game-result-nav.png" alt="game result showing score" width="400">
 
-    - <img src="documentation/mobile-highscore-nav.png" alt="highscore">
+    - <img src="documentation/mobile-highscore-nav.png" alt="highscore" width="400">
 
 - Tablet 
-    - <img src="" alt="">
+    - <img src="documentation/tablet-main-menu-nav.png" alt="tablet main menu" width="400">
 
-    - <img src="" alt="">
+    - <img src="documentation/tablet-rules-nav.png" alt="tablet rules before game" width="400">
 
-    - <img src="" alt="">
+    - <img src="documentation/tablet-questions-nav.png" alt="tablet questions displayed" width="400">
 
-    - <img src="" alt="">
+    - <img src="documentation/tablet-game-result-nav.png" alt="tablet game result" width="400">
 
-    - <img src="" alt="">
+    - <img src="documentation/tablet-highscore-nav.png" alt="tablet highscore" width="400">
 
 - Desktop
-    - <img src="" alt="">
+    - <img src="" alt="" width="400">
 
-    - <img src="" alt="">
+    - <img src="" alt="" width="400">
 
-    - <img src="" alt="">
+    - <img src="" alt="" width="400">
 
-    - <img src="" alt="">
+    - <img src="" alt="" width="400">
 
-    - <img src="" alt="">
+    - <img src="" alt="" width="400">
 
 [Back to top](#star-wars--quiz-game)
 
