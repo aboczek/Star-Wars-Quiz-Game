@@ -15,7 +15,7 @@ const saveScoreRef = document.querySelector("#save-score");
 const scoreListRef = document.querySelector("#score-list");
 const userResultRef = document.querySelector("#result");
 const highScore = JSON.parse(localStorage.getItem("highScore")) || [];
-const seconds = document.querySelector("#seconds");
+const secondsRef = document.querySelector("#seconds");
 
 const MAX_HIGH_SCORE = 3;
 const CORRECT_BONUS = 1;
@@ -46,18 +46,22 @@ const startGame = () => {
     getNewQuestion();
     rulesRef.style.display = "flex";
     gameBoardRef.style.display = "none";
-    setInterval(function () {
+    setInterval(function() {
         timeLeft--;
 
         if(timeLeft >= 0) {
             seconds.innerHTML = timeLeft;
-        }
-    }, 1000)
+            clearInterval(setInterval);
+        };
+    }, 1000);
     setTimeout(function () {
         rulesRef.style.display = "none"
         gameWindowRef.style.display = "flex";
     }, 5000);
 };
+function resetCountDown () {
+    let timeLeft = 5;
+}
 
 const showScore = () => {
     gameBoardRef.style.display = "none";
@@ -70,7 +74,7 @@ const showScore = () => {
 const returnToMainMenu = () => {
     gameBoardRef.style.display = "flex";
     leadersBoardRef.style.display = "none";
-}
+};
 
 const getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
@@ -168,7 +172,10 @@ const returnToMainMenuTwo = () => {
 
 window.addEventListener('DOMContentLoaded', () => {
     // listenning to clicks on play, highscore, return to main menu
-    playGameRef.addEventListener("click", startGame);
+    playGameRef.addEventListener("click", function(){
+        startGame();
+        resetCountDown();
+    });
     highScoreBtnRef.addEventListener("click", showScore);
     returnToMenuRef.addEventListener("click", returnToMainMenu);
     mainMenuRef.addEventListener("click", returnToMainMenuTwo);
