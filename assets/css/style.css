@@ -8,7 +8,7 @@
     --grey: #838383;
     --green: #2FFF7C;
     --red: #FF6B6B;
-  }
+}
 
 * {
     padding: 0;
@@ -17,7 +17,7 @@
 
 html {
     font-size: 62.5%;
-} 
+}
 
 body {
     font-size: 1.6rem;
@@ -34,7 +34,7 @@ body {
     max-width: 80%;
     align-items: center;
     display: block;
-    
+
 }
 
 /** Game Board and buttons **/
@@ -86,7 +86,7 @@ body {
     flex-direction: column;
     align-items: center;
     color: var(--white);
-    margin: 5% auto;
+    margin: 3rem auto;
     font-size: 1.5rem;
     backdrop-filter: blur(10px);
     height: 80%;
@@ -169,7 +169,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 2.5rem;     
+    height: 2.5rem;
 }
 
 
@@ -177,5 +177,27 @@ footer {
 @media (min-width: 468px) {
     #star-wars-logo {
         margin: -10rem auto -8rem auto;
+    }
+}
+
+@media (min-width: 768px) {
+    #rules {
+        font-size: 2rem;
+    }
+
+    .inner-rules,
+    .answer,
+    #game-score,
+    #question,
+    #bg-text,
+    #question-counter {
+        font-size: 2rem;
+    }
+    #game-result label {
+        font-size: 2rem;
+    }
+
+    footer {
+        padding-bottom: 5px;
     }
 }

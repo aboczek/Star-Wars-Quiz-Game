@@ -108,10 +108,9 @@ Main purpose of this project is to be little game where you choose correct answe
 **placeholder**
 |  Screen size |  Breakpoint |
 |---|---|
-|small|>= 576px|
-|medium|>= 768px|
-|large|>= 1024px|
-**placeholder**
+|small|>= 320px|
+|small|>= 468px|
+
 
 [Back to top](#star-wars--quiz-game)
 
