@@ -17,7 +17,6 @@ const userResultRef = document.querySelector("#result");
 const highScore = JSON.parse(localStorage.getItem("highScore")) || [];
 const secondsRef = document.querySelector("#seconds");
 
-const MAX_HIGH_SCORE = 3;
 const CORRECT_BONUS = 1;
 const MAX_QUESTIONS = 10;
 
