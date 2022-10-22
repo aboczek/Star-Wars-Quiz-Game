@@ -165,6 +165,10 @@ body {
 .incorrect {
     background-color: var(--red);
 }
+/** added for small phones **/
+#btn-lower {
+    margin-bottom: 5rem;
+}
 
 /** footer **/
 
@@ -181,7 +185,6 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-
     position: fixed;
     bottom: 0;
     width: 100%;
