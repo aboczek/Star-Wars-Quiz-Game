@@ -15,12 +15,14 @@ const saveScoreRef = document.querySelector("#save-score");
 const scoreListRef = document.querySelector("#score-list");
 const userResultRef = document.querySelector("#result");
 const highScore = JSON.parse(localStorage.getItem("highScore")) || [];
+const seconds = document.querySelector("#seconds");
 
 const MAX_HIGH_SCORE = 3;
 const CORRECT_BONUS = 1;
 const MAX_QUESTIONS = 10;
 
 let acceptingAnswers = false;
+let timeLeft = 5;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
@@ -44,6 +46,13 @@ const startGame = () => {
     getNewQuestion();
     rulesRef.style.display = "flex";
     gameBoardRef.style.display = "none";
+    setInterval(function () {
+        timeLeft--;
+
+        if(timeLeft >= 0) {
+            seconds.innerHTML = timeLeft;
+        }
+    }, 1000)
     setTimeout(function () {
         rulesRef.style.display = "none"
         gameWindowRef.style.display = "flex";
