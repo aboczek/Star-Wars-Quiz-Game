@@ -39,7 +39,6 @@ fetch("assets/json/questions.json")
 
 const internalTimer = (timeLeft=5) => {
     timer = setInterval(function() {
-        console.log(timeLeft)
         seconds.innerHTML = timeLeft;
         timeLeft--;
         if(timeLeft <= 0) {
