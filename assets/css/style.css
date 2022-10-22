@@ -83,6 +83,7 @@ body {
     color: var(--white);
     font-size: 1.7rem;
 }
+
 /** Rules **/
 
 #rules {
@@ -196,7 +197,8 @@ footer {
     color: var(--white);
 }
 
-#github:hover, #linkedin:hover {
+#github:hover,
+#linkedin:hover {
     color: var(--grey);
 }
 
