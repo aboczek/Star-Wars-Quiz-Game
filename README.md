@@ -93,15 +93,27 @@ Main purpose of this project is to be little game where you choose correct answe
 
 ### Mobile
 
-**placeholder**
+- [Main Menu](documentation/mobile-main-menu.png)
+- [Rules](documentation/mobile-rules.png)
+- [Game Window](documentation/mobile-game-window.png)
+- [Game Result](documentation/mobile-game-result.png)
+- [Highscore](documentation/mobile-highscore.png)
 
 ### Tablet 
 
-**placeholder**
+- [Main Menu](documentation/tablet-main-menu.png)
+- [Rules](documentation/tablet-rules.png)
+- [Game Window](documentation/tablet-game-window.png)
+- [Game Result](documentation/tablet-game-result.png)
+- [Highscore](documentation/tablet-highscore.png)
 
 ### Desktop
 
-**placeholder**
+- [Main Menu](documentation/desktop-main-menu.png)
+- [Rules](documentation/desktop-rules.png)
+- [Game Window](documentation/desktop-game-window.png)
+- [Game Result](documentation/desktop-game-result.png)
+- [Highscore](documentation/desktop-highscore.png)
 
 ## Website Structure
 
