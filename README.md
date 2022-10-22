@@ -38,25 +38,34 @@ Main purpose of this project is to be little game where you choose correct answe
     - As user I want you to land on main page and be able to tell what is the game about.
     - As user I want you to easily navigate through the website.
     - As user I want you to press **Play** and play the game.
+    - As user i want you to press **Highscore** and be able to see your highest score.
+    - As user I want you to see **Rules** before the game starts.
+    - As user I want you to be able to play the game and see **Game Window**.
+    - As user I want you to be able to press **Answer Buttons** and see color of it if **Answer is Correct or not**.
     - As user I want you to be able to tell how good you have done with questions by tracking the **Score**.
-    - ** placeholder for more user stories** 
+    - As user I want you to be able to save your **Score** into **Highscore**.
 
-## Website Goals
+## Website Goal
 
-- Goal of the website is to test your knowledge about Star Wars.
-- Website goal is to keep track of your score.
+- Goal of the website is to test your knowledge about Star Wars and keep score of your correct answers <br> saved into localStorage 
+and put into highscore.
+
 
 ## Requirements
 
 - Easily readable website.
 - I want user to be able to play the game without any issues.
 - Game has to be designed to fit all devices.
+- Game has to save your score.
+- Game has to retrive your highest score and put it in Highscore
 
 ## Expectations
 
 - I expect users to easily navigate through website.
 - I expect users to be able to play the game.
 - I expect website to match with colors nicely.
+- I expect this website to save users score.
+- I expect this website to show highscore by pressing button in main menu.
 
 ## Design 
 
@@ -117,7 +126,6 @@ Main purpose of this project is to be little game where you choose correct answe
 
 ## Website Structure
 
-**placeholder**
 |  Screen size |  Breakpoint |
 |---|---|
 |extra-small|>= 320px|
