@@ -185,26 +185,26 @@ and put into highscore.
     - <img src="documentation/mobile-highscore-nav.png" alt="highscore" width="400">
 
 - Tablet 
-    - <img src="documentation/tablet-main-menu-nav.png" alt="tablet main menu" width="400">
+    - <img src="documentation/tablet-main-menu-nav.png" alt="tablet main menu" width="500">
 
-    - <img src="documentation/tablet-rules-nav.png" alt="tablet rules before game" width="400">
+    - <img src="documentation/tablet-rules-nav.png" alt="tablet rules before game" width="500">
 
-    - <img src="documentation/tablet-questions-nav.png" alt="tablet questions displayed" width="400">
+    - <img src="documentation/tablet-questions-nav.png" alt="tablet questions displayed" width="500">
 
-    - <img src="documentation/tablet-game-result-nav.png" alt="tablet game result" width="400">
+    - <img src="documentation/tablet-game-result-nav.png" alt="tablet game result" width="500">
 
-    - <img src="documentation/tablet-highscore-nav.png" alt="tablet highscore" width="400">
+    - <img src="documentation/tablet-highscore-nav.png" alt="tablet highscore" width="500">
 
 - Desktop
-    - <img src="" alt="" width="400">
+    - <img src="documentation/desktop-main-menu-nav.png" alt="" width="700">
 
-    - <img src="" alt="" width="400">
+    - <img src="documentation/desktop-rules-nav.png" alt="" width="700">
 
-    - <img src="" alt="" width="400">
+    - <img src="documentation/desktop-game-window-nav.png" alt="" width="700">
 
-    - <img src="" alt="" width="400">
+    - <img src="documentation/desktop-game-result-nav.png" alt="" width="700">
 
-    - <img src="" alt="" width="400">
+    - <img src="documentation/desktop-highscore-nav.png" alt="" width="700">
 
 [Back to top](#star-wars--quiz-game)
 
@@ -219,13 +219,12 @@ and put into highscore.
 - <img src="documentation/css-validator-test.png" width="800">
 
 - JavaScript
+    - console.log testing
+    - <img src ="documentation/console-log-test.png" width="1200">
 
 
-- <img src ="documentation/console-log-test.png" width="1200">
-
-
-- Js hint
-- <img src="documentation/jshint-testing.png">
+    - Js hint
+    - <img src="documentation/jshint-testing.png">
 
 - ALL other tests done
 
