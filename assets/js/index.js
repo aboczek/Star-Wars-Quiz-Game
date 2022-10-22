@@ -22,13 +22,12 @@ const CORRECT_BONUS = 1;
 const MAX_QUESTIONS = 10;
 
 let acceptingAnswers = false;
-let timeLeft = 5;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 let questionContainer = []
 let currentQuestion = {};
-
+let timer;
 
 fetch("assets/json/questions.json")
     .then(res => {
@@ -38,6 +37,16 @@ fetch("assets/json/questions.json")
         questionContainer = loadQuestions
     });
 
+const internalTimer = (timeLeft=5) => {
+    timer = setInterval(function() {
+        console.log(timeLeft)
+        seconds.innerHTML = timeLeft;
+        timeLeft--;
+        if(timeLeft <= 0) {
+           clearInterval(timer);
+        };
+    }, 1000);
+};
 
 const startGame = () => {
     questionCounter = 0;
@@ -46,22 +55,14 @@ const startGame = () => {
     getNewQuestion();
     rulesRef.style.display = "flex";
     gameBoardRef.style.display = "none";
-    setInterval(function() {
-        timeLeft--;
 
-        if(timeLeft >= 0) {
-            seconds.innerHTML = timeLeft;
-            clearInterval(setInterval);
-        };
-    }, 1000);
+    internalTimer();
+
     setTimeout(function () {
         rulesRef.style.display = "none"
         gameWindowRef.style.display = "flex";
-    }, 5000);
+    }, 6000);
 };
-function resetCountDown () {
-    let timeLeft = 5;
-}
 
 const showScore = () => {
     gameBoardRef.style.display = "none";
@@ -172,10 +173,7 @@ const returnToMainMenuTwo = () => {
 
 window.addEventListener('DOMContentLoaded', () => {
     // listenning to clicks on play, highscore, return to main menu
-    playGameRef.addEventListener("click", function(){
-        startGame();
-        resetCountDown();
-    });
+    playGameRef.addEventListener("click", startGame);
     highScoreBtnRef.addEventListener("click", showScore);
     returnToMenuRef.addEventListener("click", returnToMainMenu);
     mainMenuRef.addEventListener("click", returnToMainMenuTwo);
