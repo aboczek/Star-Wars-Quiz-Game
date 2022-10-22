@@ -73,19 +73,19 @@ and put into highscore.
     - Colors used on the website are:
 
     - White #fff
-    - <img src="documentation/white.png" width="100">
+    - <img src="documentation/white.png" width="100" alt="white">
 
     - Blue #00ccff
-    - <img src="documentation/light-blue-color.png" width="100">
+    - <img src="documentation/light-blue-color.png" width="100" alt="blue">
 
     - Red #FF6B6B
-    - <img src="documentation/red.png" width="100">
+    - <img src="documentation/red.png" width="100" alt="red color">
 
     - Green #2FFF7C
-    - <img src="documentation/green.png" width="100">
+    - <img src="documentation/green.png" width="100" alt="green color">
 
     - Grey #838383
-    - <img src="documentation/grey.png" width="100">
+    - <img src="documentation/grey.png" width="100" alt="grey color">
 
 - Fonts
     - Font used is [Kanit](https://fonts.google.com/specimen/Kanit?query=Kanit) from google fonts its main font in entire project.
@@ -171,29 +171,16 @@ and put into highscore.
 2. Interactive buttons.
 3. Highscore.
 
-## Navigation bar
+## Navigation
 
 - Mobile
-    - **placeholder**
+    - <img src="" alt="">
 
 - Tablet 
     - **Placeholder**
 
 - Desktop
     - **Placeholder**
-
-- Main content of website.
-    - Mobile 
-
-    **placeholder**
-
-    - Tablet
-
-    **placeholder**
-
-    - Desktop
-
-    **placeholder**
 
 [Back to top](#star-wars--quiz-game)
 
