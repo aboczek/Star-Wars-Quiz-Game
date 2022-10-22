@@ -201,15 +201,20 @@ and put into highscore.
 
 - W3S HTML
 
-**placeholder**
+- <img src="documentation/html-test-validator.png">
 
 - W3S CSS
 
-**placeholder**
+- <img src="documentation/css-validator-test.png" width="800">
 
 - JavaScript
 
-**placeholder**
+
+- <img src ="documentation/console-log-test.png" width="1200">
+
+
+- Js hint
+- <img src="documentation/jshint-testing.png">
 
 - ALL other tests done
 

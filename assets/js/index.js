@@ -24,7 +24,7 @@ let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
-let questionContainer = []
+let questionContainer = [];
 let currentQuestion = {};
 let timer;
 
@@ -33,16 +33,16 @@ fetch("assets/json/questions.json")
         return res.json();
     })
     .then(loadQuestions => {
-        questionContainer = loadQuestions
+        questionContainer = loadQuestions;
     });
 
-const internalTimer = (timeLeft=5) => {
-    timer = setInterval(function() {
+const internalTimer = (timeLeft = 5) => {
+    timer = setInterval(function () {
         secondsRef.innerHTML = timeLeft;
         timeLeft--;
-        if(timeLeft <= 0) {
-           clearInterval(timer);
-        };
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+        }
     }, 1000);
 };
 
@@ -57,7 +57,7 @@ const startGame = () => {
     internalTimer();
 
     setTimeout(function () {
-        rulesRef.style.display = "none"
+        rulesRef.style.display = "none";
         gameWindowRef.style.display = "flex";
     }, 6000);
 };
@@ -83,7 +83,7 @@ const getNewQuestion = () => {
         gameWindowRef.style.display = "none";
         gameResultRef.style.display = "flex";
         return;
-    };
+    }
 
     questionCounter++;
     questionCountRef.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
@@ -114,7 +114,7 @@ const answersCorrect = () => {
             let classToApply = "incorrect";
             if (selectedButton == currentQuestion.correct) {
                 classToApply = "correct";
-            };
+            }
 
             if (classToApply === "correct") {
                 incrementScore(CORRECT_BONUS);
@@ -152,7 +152,7 @@ const saveHighScore = (e) => {
     const score = {
         score: window.localStorage.getItem("mostRecentScore"),
         name: userResultRef.value
-    }
+    };
 
     highScore.push(score);
     highScore.sort((a, b) => b.score - a.score);
