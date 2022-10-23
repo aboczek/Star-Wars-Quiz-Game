@@ -228,6 +228,17 @@ and put into highscore.
 
 - ALL other tests done
 
+
+- Testing in Screenfly
+    - <img src="documentation/screenfly-testing.png" alt="testing in screenfly">
+
+- Lighthouse testing
+    - Mobile
+    **placeholder**
+
+    - Desktop
+    **placeholder**
+    
 - Issues that came up.
     1. *userResultRef.innerHTML = mostRecentScore*  wouldnt read localStorage had to remove const variable and use localStorage.getItem("mostRecentScore");.
 
@@ -242,16 +253,6 @@ and put into highscore.
     5. setInterval wouldnt reset while trying to play the game again, was moved outside and made to function with help of tutor support.
 
     6. Answer buttons were overlapping with footer on very old phones added *id btn-lower and margin-bottom: 5rem;* to it
-
-- Testing in Screenfly
-    - <img src="documentation/screenfly-testing.png" alt="testing in screenfly">
-
-- Lighthouse testing
-    - Mobile
-    **placeholder**
-
-    - Desktop
-    **placeholder**
 
 - Known Bugs
     -
