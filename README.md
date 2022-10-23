@@ -247,11 +247,6 @@ and put into highscore.
 
     - Desktop
     - <img src="documentation/lighthouse-desktop.png" alt="desktop lighthouse result" width="1200">
-
-
-         Error - image is made to 80% max width so doesnt take entire screen height of it was too big and scaled down badly.
-
-        <img src="documentation/lighthouse-error.png" alt="desktop lighthouse error" width="1200">
     
 - Bugs fixed.
     1. *userResultRef.innerHTML = mostRecentScore*  wouldnt read localStorage had to remove const variable and use localStorage.getItem("mostRecentScore");.
