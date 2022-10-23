@@ -403,7 +403,7 @@ Following writing the code then commiting and pushing to GitHub, this project wa
 
 - Slack Community and my Mentor!
 - Tutor Support.
-- Quiz game inspired by James Q Quick (waiting for his response how to give him proper credit)
+- [James Q Quick tutorials](https://www.youtube.com/watch?v=u98ROZjBWy8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx) Quiz game inspired by James Q Quick.
 - [Simen Daehlin](https://github.com/Eventyret) My Mentor very Helpfull!
 - [screenfly](https://screenfly.org/) for testing my website ;).
 - [The W3C Markup Validation Service](https://validator.w3.org/) Validation of HTML.
