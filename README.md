@@ -102,27 +102,27 @@ and put into highscore.
 
 ### Mobile
 
-- [Main Menu](documentation/mobile-main-menu.png)
-- [Rules](documentation/mobile-rules.png)
-- [Game Window](documentation/mobile-game-window.png)
-- [Game Result](documentation/mobile-game-result.png)
-- [Highscore](documentation/mobile-highscore.png)
+- [Main Menu](documentation/mobile-main-menu-wireframe.png)
+- [Rules](documentation/mobile-rules-wireframe.png)
+- [Game Window](documentation/mobile-game-window-wireframe.png)
+- [Game Result](documentation/mobile-game-result-wireframe.png)
+- [Highscore](documentation/mobile-highscore-wireframe.png)
 
 ### Tablet 
 
-- [Main Menu](documentation/tablet-main-menu.png)
-- [Rules](documentation/tablet-rules.png)
-- [Game Window](documentation/tablet-game-window.png)
-- [Game Result](documentation/tablet-game-result.png)
-- [Highscore](documentation/tablet-highscore.png)
+- [Main Menu](documentation/tablet-main-menu-wireframe.png)
+- [Rules](documentation/tablet-rules-wireframe.png)
+- [Game Window](documentation/tablet-game-window-wireframe.png)
+- [Game Result](documentation/tablet-game-result-wireframe.png)
+- [Highscore](documentation/tablet-highscore-wireframe.png)
 
 ### Desktop
 
-- [Main Menu](documentation/desktop-main-menu.png)
-- [Rules](documentation/desktop-rules.png)
-- [Game Window](documentation/desktop-game-window.png)
-- [Game Result](documentation/desktop-game-result.png)
-- [Highscore](documentation/desktop-highscore.png)
+- [Main Menu](documentation/desktop-main-menu-wireframe.png)
+- [Rules](documentation/desktop-rules-wireframe.png)
+- [Game Window](documentation/desktop-game-window-wireframe.png)
+- [Game Result](documentation/desktop-game-result-wireframe.png)
+- [Highscore](documentation/desktop-highscore-wireframe.png)
 
 ## Website Structure
 
