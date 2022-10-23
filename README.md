@@ -75,7 +75,7 @@ and put into highscore.
     - White #fff
     - <img src="documentation/white.png" width="100" alt="white">
 
-    - Blue #00ccff
+    - Blue #0071BC
     - <img src="documentation/light-blue-color.png" width="100" alt="blue">
 
     - Red #FF6B6B
