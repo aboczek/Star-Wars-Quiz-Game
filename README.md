@@ -44,6 +44,7 @@ Main purpose of this project is to be little game where you choose correct answe
     - As user I want you to be able to press **Answer Buttons** and see color of it if **Answer is Correct or not**.
     - As user I want you to be able to tell how good you have done with questions by tracking the **Score**.
     - As user I want you to be able to save your **Score** into **Highscore**.
+    - As user I want you to press Github and LinkedIn icon and be brought to those websites in new window.
 
 ## Website Goal
 
@@ -264,17 +265,27 @@ and put into highscore.
     6. Answer buttons were overlapping with footer on very old phones added *id btn-lower and margin-bottom: 5rem;* to it
 
 - Known Bugs
-    -
+    - none so far.
 
 # Testing user stories
 
-- abcdefg **placeholder**
+1. As user I want you to land on main page and be able to tell what is the game about.
 
 | **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
 |---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
-| **plaholder** | **placeholder** | **placegolder** | PASS              |
+| Land on page and be able to tell whats the website about | land on main page | See logo of star wars and paragraph of **Welcome to quiz game** | PASS              |
 <details><summary>Picture</summary>
-<img src="documentation/testing-user-stories-1.jpg" alt="Landing page"/>
+<img src="documentation/testing-user-stories-1.png" alt="Landing page"/>
+</details>
+<br>
+
+2. As user I want you to easily navigate through the website.
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| User navigates easily through quiz game | land on main menu | See buttons in game and be able to press them leading them forward | PASS              |
+<details><summary>Picture</summary>
+<img src="documentation/testing-user-stories-2.png" alt="Landing page with buttons circled out"/>
 </details>
 <br>
 
@@ -291,6 +302,8 @@ Following writing the code then commiting and pushing to GitHub, this project wa
 # Credits:
 
 - Slack Community and my Mentor!
+- Tutor Support.
+- Quiz game inspired by James Q Quick (waiting for his response how to give him proper credit)
 - [Simen Daehlin](https://github.com/Eventyret) My Mentor very Helpfull!
 - [screenfly](https://screenfly.org/) for testing my website ;).
 - [The W3C Markup Validation Service](https://validator.w3.org/) Validation of HTML.
@@ -300,7 +313,6 @@ Following writing the code then commiting and pushing to GitHub, this project wa
 - [Big Quiz Thing](https://bigquizthing.com/blog-post/star-wars-trivia-questions-for-fun-game-night/) Questions for quiz.
 - [AllMacWallpaper](https://www.allmacwallpaper.com/macbook-air-wallpaper/dark-starry-sky-stars-4k/22301) background picture was taken from there.
 - [Colorhexa](https://www.colorhexa.com/) was used to take colors from for readme.
-- []()
 
 
 [Back to top](#gourmet-restaurant-portfolio-project-1)
