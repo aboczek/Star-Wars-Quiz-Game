@@ -228,15 +228,33 @@ and put into highscore.
 
 - ALL other tests done
 
-**placeholder**
+- Issues that came up.
+    1. *userResultRef.innerHTML = mostRecentScore*  wouldnt read localStorage had to remove const variable and use localStorage.getItem("mostRecentScore");.
 
-**placeholder**
+    2. *highScore* wouldnt read *mostRecentScore*variable and had to use localStorage.getItem("mostRecentScore"); assigned to it.
 
-**placeholder**
+    3. *saveHighScore* function wouldnt pull data from localStorage > mostRecentScore and used again *localStorage.getItem("mostRecentScore");*.
 
-**placeholder**
+    4. localStorage highScore wouldnt load without website refresh had to move it to *showScore* function to call it out.<details><summary>JavaScript code</summary>scoreListRef.innerHTML = highScore.map(score => {
+        return `<li class="high-score">${score.name} - ${score.score}</li>`;
+    }).join("")</details> 
 
-**placeholder**
+    5. setInterval wouldnt reset while trying to play the game again, was moved outside and made to function with help of tutor support.
+
+    6. Answer buttons were overlapping with footer on very old phones added *id btn-lower and margin-bottom: 5rem;* to it
+
+- Testing in Screenfly
+    - <img src="documentation/screenfly-testing.png" alt="testing in screenfly">
+
+- Lighthouse testing
+    - Mobile
+    **placeholder**
+
+    - Desktop
+    **placeholder**
+
+- Known Bugs
+    -
 
 # Testing user stories
 
