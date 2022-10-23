@@ -162,9 +162,9 @@ const saveHighScore = (e) => {
     userResultRef.value = "";
     gameResultRef.style.display = "none";
     gameBoardRef.style.display = "flex";
-    
 };
 saveScoreBtn();
+
 const returnToMainMenuTwo = () => {
     gameResultRef.style.display = "none";
     gameBoardRef.style.display = "flex";

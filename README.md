@@ -41,9 +41,10 @@ Main purpose of this project is to be little game where you choose correct answe
     - As user i want you to press **Highscore** and be able to see your highest score.
     - As user I want you to see **Rules** before the game starts.
     - As user I want you to be able to play the game and see **Game Window**.
-    - As user I want you to be able to press **Answer Buttons** and see color of it if **Answer is Correct or not**.
+    - As user I want you to be able to press **Answer Buttons** and see color of it if **Answer is Correct or Incorrect**.
     - As user I want you to be able to tell how good you have done with questions by tracking the **Score**.
     - As user I want you to be able to save your **Score** into **Highscore**.
+    - As user I want you to see your score saved in **Highscore**
     - As user I want you to press Github and LinkedIn icon and be brought to those websites in new window.
 
 ## Website Goal
@@ -249,8 +250,10 @@ and put into highscore.
 
         <img src="documentation/lighthouse-error.png" alt="desktop lighthouse error" width="1200">
     
-- Issues that came up.
+- Bugs fixed.
     1. *userResultRef.innerHTML = mostRecentScore*  wouldnt read localStorage had to remove const variable and use localStorage.getItem("mostRecentScore");.
+        <details><summary>JavaScript code</summary>userResultRef.innerHTML = localStorage.getItem("mostRecentScore");</details>
+    
 
     2. *highScore* wouldnt read *mostRecentScore*variable and had to use localStorage.getItem("mostRecentScore"); assigned to it.
 
@@ -264,8 +267,11 @@ and put into highscore.
 
     6. Answer buttons were overlapping with footer on very old phones added *id btn-lower and margin-bottom: 5rem;* to it
 
-- Known Bugs
-    - none so far.
+    7. Saving Highscore would save it more than once at once in localStorage, function was called out in **getNewQuestions** function,
+    fixed by calling it outside function after declaring it.
+
+- Current Bugs
+    - none.
 
 # Testing user stories
 
@@ -295,8 +301,8 @@ and put into highscore.
 |---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
 | Play! button in main menu | Press Play!  | Game will start and Rules will be displayed | PASS              |
 <details><summary>Picture</summary>
-<img src="documentation/testing-user-stories-3.png" alt="Landing page with play buttons circled out"/>
-<img src="documentation/testing-user-stories-4.png" alt="rules displayed"/>
+<img src="documentation/testing-user-stories-3.png" alt="Landing page with play button circled out"/>
+<img src="documentation/testing-user-stories-4.png" alt="Rules are displayed"/>
 </details>
 <br>
 
@@ -304,9 +310,82 @@ and put into highscore.
 
 | **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
 |---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
-| User navigates easily through quiz game | land on main menu | See buttons in game and be able to press them leading them forward | PASS              |
+| Highscore button in main menu | Press Highscore | Brings you to Highscore and shows top.3 scores | PASS              |
 <details><summary>Picture</summary>
-<img src="documentation/testing-user-stories-2.png" alt="Landing page with buttons circled out"/>
+<img src="documentation/testing-user-stories-5.png" alt="Landing page with high score button circled out"/>
+<img src="documentation/testing-user-stories-6.png" alt="Highscore are displayed"/>
+</details>
+<br>
+
+5. As user I want you to see **Rules** before the game starts.
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| Rules displayed before game | Press Play! | Shows rules on screen for 5 seconds | PASS              |
+<details><summary>Picture</summary>
+<img src="documentation/testing-user-stories-7.png" alt="Rules are displayed"/>
+</details>
+<br>
+
+6. As user I want you to be able to play the game and see **Game Window**.
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| Questions are being displayed and answers to be picked | Read the question and press correct answer | If answer is correct button will change to green if incorrect it will change to red | PASS              |
+<details><summary>Picture</summary>
+<img src="documentation/testing-user-stories-8.png" alt="Questions are displayed"/>
+</details>
+<br>
+
+7. As user I want you to be able to press **Answer Buttons** and see color of it if **Answer is Correct or Incorrect**.
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| Buttons change colros accordingly | Press the answer button  | if correct changes to green if incorrect changes to red | PASS              |
+<details><summary>Picture</summary>
+<img src="documentation/testing-user-stories-10.png" alt="Game result is displayed"/>
+<img src="documentation/testing-user-stories-11.png" alt="Correct question"/>
+</details>
+<br>
+
+8. As user I want you to be able to tell how good you have done with questions by tracking the **Score**.
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| Game result is displayed after game is over | Put your nickname in input field or go back to main menu | Game result displayed with input field to save score or go back to main menu | PASS              |
+<details><summary>Picture</summary>
+<img src="documentation/testing-user-stories-9.png" alt="Game result is displayed"/>
+</details>
+<br>
+
+9. As user I want you to be able to save your **Score** into **Highscore**.
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| Save your score to Highscore | Put your nickname in input field and press Save | Score will save and it will return to main menu | PASS              |
+<details><summary>Picture</summary>
+<img src="documentation/testing-user-stories-12.png" alt="Save button circled out"/>
+</details>
+<br>
+
+10. As user I want you to see your score saved in **Highscore**
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| Highscore display top score saved | Press Highscore | Highscore will display scores saved into highscore | PASS              |
+<details><summary>Picture</summary>
+<img src="documentation/testing-user-stories-13.png" alt="Save button circled out"/>
+<img src="documentation/testing-user-stories-14.png" alt="Highscore being displayed">
+</details>
+<br>
+
+11. As user I want you to press Github and LinkedIn icon and be brought to those websites in new window.
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| Github and LinkedIn links in footer | Press Github icon or LinkedIn icon | Pressing either of icons will open new page and bring you to website accordingly | PASS              |
+<details><summary>Picture</summary>
+<img src="documentation/testing-user-stories-15.png" alt="Save button circled out"/>
 </details>
 <br>
 
