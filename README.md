@@ -1,8 +1,11 @@
 # Star Wars || Quiz Game
 
 This is Portfolio Project 2 called Star Wars || Quiz game (Those two Pipe lines reperesent lightsabres!) it is designed to be fun little game with ten questions.
-
-**placeholder for picture**
+<br>
+<br>
+<img src="documentation/am-i-responsive.png" alt="Am i Responsive">
+<br>
+<br>
 
 - [Motivation](#motivation)
 - [User Experience](#user-experience-ux)
@@ -408,6 +411,7 @@ Following writing the code then commiting and pushing to GitHub, this project wa
 - [screenfly](https://screenfly.org/) for testing my website ;).
 - [The W3C Markup Validation Service](https://validator.w3.org/) Validation of HTML.
 - [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) Validation of CSS.
+- [JS Hint](https://jshint.com/) Debugging code.
 - [AmIresponsive](https://ui.dev/amiresponsive) for responsive look of my website.
 - [Autoprefixer](https://autoprefixer.github.io/) used to prefix CSS.
 - [Big Quiz Thing](https://bigquizthing.com/blog-post/star-wars-trivia-questions-for-fun-game-night/) Questions for quiz.
