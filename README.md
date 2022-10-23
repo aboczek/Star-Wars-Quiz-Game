@@ -289,6 +289,27 @@ and put into highscore.
 </details>
 <br>
 
+3. - As user I want you to press **Play** and play the game.
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| Play! button in main menu | Press Play!  | Game will start and Rules will be displayed | PASS              |
+<details><summary>Picture</summary>
+<img src="documentation/testing-user-stories-3.png" alt="Landing page with play buttons circled out"/>
+<img src="documentation/testing-user-stories-4.png" alt="rules displayed"/>
+</details>
+<br>
+
+4. As user i want you to press **Highscore** and be able to see your highest score.
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| User navigates easily through quiz game | land on main menu | See buttons in game and be able to press them leading them forward | PASS              |
+<details><summary>Picture</summary>
+<img src="documentation/testing-user-stories-2.png" alt="Landing page with buttons circled out"/>
+</details>
+<br>
+
 # Deployment
 Following writing the code then commiting and pushing to GitHub, this project was deployed using GitHub by the following steps.
 
