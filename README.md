@@ -234,10 +234,19 @@ and put into highscore.
 
 - Lighthouse testing
     - Mobile
-    **placeholder**
+    - <img src="documentation/lighthouse-mobile.png" alt="mobile lighthouse result" width="1200">
+
+        Error - height is auto and width is set to max-wdith 80% to scale down nicely on small devices.
+
+        <img src="documentation/lighthouse-mobile-error.png" alt="mobile lighthouse error" width="1200">
 
     - Desktop
-    **placeholder**
+    - <img src="documentation/lighthouse-desktop.png" alt="desktop lighthouse result" width="1200">
+
+
+         Error - image is made to 80% max width so doesnt take entire screen height of it was too big and scaled down badly.
+
+        <img src="documentation/lighthouse-error.png" alt="desktop lighthouse error" width="1200">
     
 - Issues that came up.
     1. *userResultRef.innerHTML = mostRecentScore*  wouldnt read localStorage had to remove const variable and use localStorage.getItem("mostRecentScore");.
