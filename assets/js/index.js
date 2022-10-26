@@ -32,7 +32,7 @@ fetch("assets/data/questions.json")
     .then(loadQuestions => questionContainer = loadQuestions);
 
 const countdown = (timeLeft = 5) => {
-    timer = setInterval(function () {
+    let timer = setInterval(function () {
         secondsRef.innerHTML = timeLeft;
         timeLeft--;
         if (timeLeft <= 0) {
