@@ -111,7 +111,7 @@ and put into highscore.
 - [Rules](documentation/wireframes/mobile-rules-wireframe.png)
 - [Game Window](documentation/wireframes/mobile-game-window-wireframe.png)
 - [Game Result](documentation/wireframes/mobile-game-result-wireframe.png)
-- [Highscore](documentation/mobile-highscore-wireframe.png)
+- [Highscore](documentation/wireframes/mobile-highscore-wireframe.png)
 
 ### Tablet 
 
