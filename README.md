@@ -107,27 +107,27 @@ and put into highscore.
 
 ### Mobile
 
-- [Main Menu](documentation/mobile-main-menu-wireframe.png)
-- [Rules](documentation/mobile-rules-wireframe.png)
-- [Game Window](documentation/mobile-game-window-wireframe.png)
-- [Game Result](documentation/mobile-game-result-wireframe.png)
+- [Main Menu](documentation/wireframes/mobile-main-menu-wireframe.png)
+- [Rules](documentation/wireframes/mobile-rules-wireframe.png)
+- [Game Window](documentation/wireframes/mobile-game-window-wireframe.png)
+- [Game Result](documentation/wireframes/mobile-game-result-wireframe.png)
 - [Highscore](documentation/mobile-highscore-wireframe.png)
 
 ### Tablet 
 
-- [Main Menu](documentation/tablet-main-menu-wireframe.png)
-- [Rules](documentation/tablet-rules-wireframe.png)
-- [Game Window](documentation/tablet-game-window-wireframe.png)
-- [Game Result](documentation/tablet-game-result-wireframe.png)
-- [Highscore](documentation/tablet-highscore-wireframe.png)
+- [Main Menu](documentation/wireframes/tablet-main-menu-wireframe.png)
+- [Rules](documentation/wireframes/tablet-rules-wireframe.png)
+- [Game Window](documentation/wireframes/tablet-game-window-wireframe.png)
+- [Game Result](documentation/wireframes/tablet-game-result-wireframe.png)
+- [Highscore](documentation/wireframes/tablet-highscore-wireframe.png)
 
 ### Desktop
 
-- [Main Menu](documentation/desktop-main-menu-wireframe.png)
-- [Rules](documentation/desktop-rules-wireframe.png)
-- [Game Window](documentation/desktop-game-window-wireframe.png)
-- [Game Result](documentation/desktop-game-result-wireframe.png)
-- [Highscore](documentation/desktop-highscore-wireframe.png)
+- [Main Menu](documentation/wireframes/desktop-main-menu-wireframe.png)
+- [Rules](documentation/wireframes/desktop-rules-wireframe.png)
+- [Game Window](documentation/wireframes/desktop-game-window-wireframe.png)
+- [Game Result](documentation/wireframes/desktop-game-result-wireframe.png)
+- [Highscore](documentation/wireframes/desktop-highscore-wireframe.png)
 
 ## Website Structure
 
