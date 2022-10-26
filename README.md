@@ -250,16 +250,27 @@ and put into highscore.
     
 - Bugs fixed.
     1. *userResultRef.innerHTML = mostRecentScore*  wouldnt read localStorage had to remove const variable and use localStorage.getItem("mostRecentScore");.
-        <details><summary>JavaScript code</summary>userResultRef.innerHTML = localStorage.getItem("mostRecentScore");</details>
+    <details><summary>JavaScript code</summary>
+
+    ```
+    userResultRef.innerHTML = localStorage.getItem("mostRecentScore");
+    ```
+    </details>
     
 
     2. *highScore* wouldnt read *mostRecentScore*variable and had to use localStorage.getItem("mostRecentScore"); assigned to it.
 
     3. *saveHighScore* function wouldnt pull data from localStorage > mostRecentScore and used again *localStorage.getItem("mostRecentScore");*.
 
-    4. localStorage highScore wouldnt load without website refresh had to move it to *showScore* function to call it out.<details><summary>JavaScript code</summary>scoreListRef.innerHTML = highScore.map(score => {
+    4. localStorage highScore wouldnt load without website refresh had to move it to *showScore* function to call it out.
+    <details><summary>JavaScript code</summary>
+
+    ```
+    scoreListRef.innerHTML = highScore.map(score => {
         return `<li class="high-score">${score.name} - ${score.score}</li>`;
-    }).join("")</details> 
+    }).join("")
+    ```
+    </details> 
 
     5. setInterval wouldnt reset while trying to play the game again, was moved outside and made to function with help of tutor support.
 
