@@ -104,6 +104,13 @@ body {
     font-weight: 400;
 }
 
+.answer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
 #welcome {
     color: var(--white);
     font-size: 1.7rem;

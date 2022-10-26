@@ -28,7 +28,7 @@ let questionContainer = [];
 let currentQuestion = {};
 let timer;
 
-fetch("assets/json/questions.json")
+fetch("assets/data/questions.json")
     .then(res => {
         return res.json();
     })
