@@ -202,7 +202,7 @@ const returnToMainMenuTwo = () => {
     gameBoardRef.style.display = "flex";
 };
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener("DOMContentLoaded", () => {
     playGameRef.addEventListener("click", startGame);
     highScoreBtnRef.addEventListener("click", showScore);
     returnToMenuRef.addEventListener("click", returnToMainMenu);
