@@ -31,6 +31,10 @@ fetch("assets/data/questions.json")
     .then(res => res.json())
     .then(loadQuestions => questionContainer = loadQuestions);
 
+/**
+ * Countdown for rules to be displayed
+ * @param {Number} timeLeft 
+ */
 const countdown = (timeLeft = 5) => {
     let timer = setInterval(function () {
         secondsRef.innerHTML = timeLeft;
@@ -40,6 +44,7 @@ const countdown = (timeLeft = 5) => {
         }
     }, 1000);
 };
+
 /**
  * Starts the game while turning on countdown from 5 to 0 and then shows Questions
  */
@@ -60,7 +65,8 @@ const startGame = () => {
 };
 
 /**
- * @returns shows highscore in main menu
+ * shows highscore in main menu
+ * @returns {HTMLElement}
  */
 const showScore = () => {
     gameBoardRef.style.display = "none";
@@ -71,7 +77,7 @@ const showScore = () => {
 };
 
 /**
- * Returns from highscore to main menu
+ * Goes back from highscore to main menu
  */
 const returnToMainMenu = () => {
     gameBoardRef.style.display = "flex";
@@ -79,9 +85,9 @@ const returnToMainMenu = () => {
 };
 
 /**
- * 
- * @returns gets new question and randomize it, if there is no more available questions saves score to display at the end
+ * gets new question and randomize it, if there is no more available questions saves score to display at the end
  * displays each answer on buttons
+ * @returns void
  */
 const getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
@@ -143,8 +149,8 @@ const answersCorrect = () => {
 };
 
 /**
- * 
- * @param {*} num increases score displayed at the end of the game
+ * increases score displayed at the end of the game
+ * @param {Number} num 
  */
 const incrementScore = num => score += num;
 
@@ -172,8 +178,8 @@ const saveScoreBtn = () => {
 };
 
 /**
- * 
- * @param {*} e Pulls score from localstorage and makes it highest to lowest allowing only top 3 score to be saved/shown
+ * Pulls score from localstorage and makes it highest to lowest allowing only top 3 score to be saved/shown
+ * @param {HTMLElement} e 
  */
 const saveHighScore = (e) => {
     e.preventDefault();
@@ -192,6 +198,7 @@ const saveHighScore = (e) => {
     gameResultRef.style.display = "none";
     gameBoardRef.style.display = "flex";
 };
+
 saveScoreBtn();
 
 /**
