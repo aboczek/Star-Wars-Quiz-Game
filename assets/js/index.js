@@ -26,7 +26,6 @@ let questionCounter = 0;
 let availableQuestions = [];
 let questionContainer = [];
 let currentQuestion = {};
-let timer;
 
 fetch("assets/data/questions.json")
     .then(res => {
@@ -36,7 +35,7 @@ fetch("assets/data/questions.json")
         questionContainer = loadQuestions;
     });
 
-const internalTimer = (timeLeft = 5) => {
+const countdown = (timeLeft = 5) => {
     timer = setInterval(function () {
         secondsRef.innerHTML = timeLeft;
         timeLeft--;
@@ -54,7 +53,7 @@ const startGame = () => {
     rulesRef.style.display = "flex";
     gameBoardRef.style.display = "none";
 
-    internalTimer();
+    countdown(5);
 
     setTimeout(function () {
         rulesRef.style.display = "none";
