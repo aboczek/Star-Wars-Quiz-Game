@@ -6,7 +6,7 @@
 */
 
 /** Fonts **/
-@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
 
 
 :root {
@@ -32,6 +32,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     font-family: "Kanit", sans-serif;
+    font-weight: 400;
 }
 
 /** Star Wars logo on top of background picture **/
@@ -41,8 +42,8 @@ body {
     height: auto;
     max-width: 80%;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     display: block;
 
 }
@@ -55,11 +56,11 @@ body {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin: 0 auto;
 }
 
@@ -85,11 +86,11 @@ body {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     text-align: center;
     background-color: var(--bluebutton);
     width: 25rem;
@@ -100,7 +101,7 @@ body {
     border-radius: 1rem;
     color: var(--white);
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 #welcome {
@@ -114,16 +115,16 @@ body {
     display: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     color: var(--white);
     margin: 3rem auto;
     font-size: 1.5rem;
-    -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(1rem);
+    backdrop-filter: blur(1rem);
     height: 80%;
     width: 25rem;
 }
@@ -148,17 +149,17 @@ body {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin: 5% auto;
     height: 80%;
     width: 25rem;
     font-size: 1.5rem;
-    -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(1rem);
+    backdrop-filter: blur(1rem);
 }
 
 #score-list {
@@ -176,11 +177,11 @@ body {
     display: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     color: var(--white);
 }
 
@@ -188,11 +189,11 @@ body {
     display: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     color: var(--white);
 }
 
@@ -213,6 +214,7 @@ body {
 .incorrect {
     background-color: var(--red);
 }
+
 /** added for small phones **/
 #btn-lower {
     margin-bottom: 5rem;
@@ -235,11 +237,11 @@ footer {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -270,6 +272,6 @@ footer {
 
 @media (min-width: 768px) {
     footer {
-        padding-bottom: 5px;
+        padding-bottom: 0.5rem;
     }
 }
