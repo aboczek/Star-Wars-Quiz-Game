@@ -81,6 +81,7 @@ const returnToMainMenu = () => {
 /**
  * 
  * @returns gets new question and randomize it, if there is no more available questions saves score to display at the end
+ * displays each answer on buttons
  */
 const getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
@@ -108,6 +109,10 @@ const getNewQuestion = () => {
     acceptingAnswers = true;
     answersCorrect();
 };
+
+/**
+ * Checks for selected answer and if its true makes it correct if false makes it incorrect.
+ */
 const answersCorrect = () => {
     answersRef.forEach(answer => {
         answer.addEventListener("click", e => {
@@ -136,22 +141,40 @@ const answersCorrect = () => {
         });
     });
 };
+
+/**
+ * 
+ * @param {*} num increases score displayed at the end of the game
+ */
 const incrementScore = num => score += num;
 
-
+/**
+ * Listens to see if there is any input in, if input is empty wont let save the score
+ */
 userResultRef.addEventListener("keyup", () => {
     saveScoreRef.disabled = !userResultRef.value;
 });
 
+/**
+ * Display score at the end of the game 
+ */
 const getGameScore = () => {
     gameScoreRef.innerText = window.localStorage.getItem("mostRecentScore");
 };
+
+/**
+ * Saves score to highScore when button is pressed
+ */
 const saveScoreBtn = () => {
-    saveScoreRef.addEventListener("click", function (event) {
+    saveScoreRef.addEventListener("click", event => {
         saveHighScore(event);
     });
 };
 
+/**
+ * 
+ * @param {*} e Pulls score from localstorage and makes it highest to lowest allowing only top 3 score to be saved/shown
+ */
 const saveHighScore = (e) => {
     e.preventDefault();
 
@@ -171,13 +194,15 @@ const saveHighScore = (e) => {
 };
 saveScoreBtn();
 
+/**
+ * Returns from end game to main menu without saving score
+ */
 const returnToMainMenuTwo = () => {
     gameResultRef.style.display = "none";
     gameBoardRef.style.display = "flex";
 };
 
 window.addEventListener('DOMContentLoaded', () => {
-    // listenning to clicks on play, highscore, return to main menu
     playGameRef.addEventListener("click", startGame);
     highScoreBtnRef.addEventListener("click", showScore);
     returnToMenuRef.addEventListener("click", returnToMainMenu);
