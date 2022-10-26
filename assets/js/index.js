@@ -41,7 +41,7 @@ const countdown = (timeLeft = 5) => {
     }, 1000);
 };
 /**
- * Starts the game
+ * Starts the game while turning on countdown from 5 to 0 and then shows Questions
  */
 const startGame = () => {
     questionCounter = 0;
