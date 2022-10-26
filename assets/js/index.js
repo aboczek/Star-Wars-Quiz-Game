@@ -28,12 +28,8 @@ let questionContainer = [];
 let currentQuestion = {};
 
 fetch("assets/data/questions.json")
-    .then(res => {
-        return res.json();
-    })
-    .then(loadQuestions => {
-        questionContainer = loadQuestions;
-    });
+    .then(res => res.json())
+    .then(loadQuestions => questionContainer = loadQuestions);
 
 const countdown = (timeLeft = 5) => {
     timer = setInterval(function () {
@@ -128,9 +124,8 @@ const answersCorrect = () => {
         });
     });
 };
-const incrementScore = num => {
-    score += num;
-};
+const incrementScore = num => score += num;
+
 
 userResultRef.addEventListener("keyup", () => {
     saveScoreRef.disabled = !userResultRef.value;
@@ -140,7 +135,7 @@ const gameScoreFunction = () => {
     gameScoreRef.innerText = window.localStorage.getItem("mostRecentScore");
 };
 const saveScoreBtn = () => {
-    document.querySelector("#save-score").addEventListener("click", function (event) {
+    saveScoreRef.addEventListener("click", function (event) {
         saveHighScore(event);
     });
 };
