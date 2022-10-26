@@ -256,12 +256,12 @@ footer {
 }
 
 #github {
-    fill: var(--white);
+    color: var(--white);
     margin-right: 2rem;
 }
 
-#linkedin > svg {
-    fill: white;
+#linkedin {
+    color: var(--white);
 }
 
 #github:hover,
