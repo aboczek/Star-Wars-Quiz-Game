@@ -40,7 +40,9 @@ const countdown = (timeLeft = 5) => {
         }
     }, 1000);
 };
-
+/**
+ * Starts the game
+ */
 const startGame = () => {
     questionCounter = 0;
     score = 0;
@@ -57,6 +59,9 @@ const startGame = () => {
     }, 6000);
 };
 
+/**
+ * @returns shows highscore in main menu
+ */
 const showScore = () => {
     gameBoardRef.style.display = "none";
     leadersBoardRef.style.display = "flex";
@@ -65,15 +70,22 @@ const showScore = () => {
     }).join("");
 };
 
+/**
+ * Returns from highscore to main menu
+ */
 const returnToMainMenu = () => {
     gameBoardRef.style.display = "flex";
     leadersBoardRef.style.display = "none";
 };
 
+/**
+ * 
+ * @returns gets new question and randomize it, if there is no more available questions saves score to display at the end
+ */
 const getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score);
-        gameScoreFunction();
+        getGameScore();
         // saveScoreBtn();
         gameWindowRef.style.display = "none";
         gameResultRef.style.display = "flex";
@@ -131,7 +143,7 @@ userResultRef.addEventListener("keyup", () => {
     saveScoreRef.disabled = !userResultRef.value;
 });
 
-const gameScoreFunction = () => {
+const getGameScore = () => {
     gameScoreRef.innerText = window.localStorage.getItem("mostRecentScore");
 };
 const saveScoreBtn = () => {
