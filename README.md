@@ -89,12 +89,18 @@ and put into highscore.
     - Green #2FFF7C
     - <img src="documentation/green.png" width="100" alt="green color">
 
-    - Grey #838383
-    - <img src="documentation/grey.png" width="100" alt="grey color">
+    - Grey #D3d3d3
+    - <img src="documentation/lightgrey.png" width="100" alt="light grey color">
+
+    - Yellow #FDB81E
+    - <img src="documentation/yellow.png" width="100" alt="yellow color">
+
+    - Black #212121
+    - <img src="documentation/black.png" width="100" alt="black color">
 
 - Fonts
     - Font used is [Kanit](https://fonts.google.com/specimen/Kanit?query=Kanit) from google fonts its main font in entire project.
-    Back up font is "sans-serif".
+    Back up font is sans-serif.
 
 - Image 
     - Background image was taken from [allmacwallpaper](https://www.allmacwallpaper.com/macbook-air-wallpaper/dark-starry-sky-stars-4k/22301) and is used for educational purpose only.
