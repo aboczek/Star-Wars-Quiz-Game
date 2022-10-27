@@ -178,6 +178,8 @@ and put into highscore.
 
 ## Navigation
 
+### On user feedback main menu and end game menu buttons changed color to yellow color matching Star Wars logo.
+
 - Mobile
     - <img src="documentation/mobile-main-menu-nav.png" alt="mobile main menu" width="400">
 
@@ -249,7 +251,7 @@ and put into highscore.
     - <img src="documentation/lighthouse-desktop.png" alt="desktop lighthouse result" width="1200">
     
 - Bugs fixed.
-    1. *userResultRef.innerHTML = mostRecentScore*  wouldnt read localStorage had to remove const variable and use localStorage.getItem("mostRecentScore");.
+    1. `userResultRef.innerHTML = mostRecentScore`  wouldnt read localStorage had to remove const variable and use localStorage.getItem("mostRecentScore");.
     <details><summary>JavaScript code</summary>
 
     ```
@@ -258,9 +260,9 @@ and put into highscore.
     </details>
     
 
-    2. *highScore* wouldnt read *mostRecentScore*variable and had to use localStorage.getItem("mostRecentScore"); assigned to it.
+    2. *highScore* wouldnt read *mostRecentScore*variable and had to use `localStorage.getItem("mostRecentScore");` assigned to it.
 
-    3. *saveHighScore* function wouldnt pull data from localStorage > mostRecentScore and used again *localStorage.getItem("mostRecentScore");*.
+    3. *saveHighScore* function wouldnt pull data from localStorage > mostRecentScore and used again `*localStorage.getItem("mostRecentScore");*`.
 
     4. localStorage highScore wouldnt load without website refresh had to move it to *showScore* function to call it out.
     <details><summary>JavaScript code</summary>
