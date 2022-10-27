@@ -140,7 +140,7 @@ and put into highscore.
 
 [Back to top](#star-wars--quiz-game)
 
-# Technology, Frameworks and Programs used.
+# Technology, Frameworks and Programs
 
 ## Languages
 
