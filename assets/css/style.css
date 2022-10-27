@@ -309,7 +309,7 @@ footer {
 
 #github:hover,
 #linkedin:hover {
-    color: var(--grey);
+    color: var(--lightgrey);
 }
 
 @media (min-width: 468px) {
