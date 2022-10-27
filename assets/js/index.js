@@ -6,7 +6,6 @@ const returnToMenuRef = document.querySelector("#return-to-menu");
 const rulesRef = document.querySelector("#rules");
 const gameWindowRef = document.querySelector("#game-window");
 const questionRef = document.querySelector("#question");
-const answersRef = Array.from(document.querySelectorAll(".answer"));
 const gameResultRef = document.querySelector("#game-result");
 const gameScoreRef = document.querySelector("#game-score");
 const mainMenuRef = document.querySelector("#main-menu");
@@ -14,8 +13,9 @@ const questionCountRef = document.querySelector("#question-counter");
 const saveScoreRef = document.querySelector("#save-score");
 const scoreListRef = document.querySelector("#score-list");
 const userResultRef = document.querySelector("#result");
-const highScore = JSON.parse(localStorage.getItem("highScore")) || [];
 const secondsRef = document.querySelector("#seconds");
+const answersRef = Array.from(document.querySelectorAll(".answer"));
+const highScore = JSON.parse(localStorage.getItem("highScore")) || [];
 
 const CORRECT_BONUS = 1;
 const MAX_QUESTIONS = 10;
@@ -27,9 +27,16 @@ let availableQuestions = [];
 let questionContainer = [];
 let currentQuestion = {};
 
+/**
+ * Gets Question
+ */
+const getQuestion = () => {
 fetch("assets/data/questions.json")
     .then(res => res.json())
     .then(loadQuestions => questionContainer = loadQuestions);
+};
+
+getQuestion();
 
 /**
  * Countdown for rules to be displayed
@@ -46,7 +53,8 @@ const countdown = (timeLeft = 5) => {
 };
 
 /**
- * Starts the game while turning on countdown from 5 to 0 and then shows Questions
+ * Starts the game while turning on 
+ * countdown from 5 to 0 and then shows Questions
  */
 const startGame = () => {
     questionCounter = 0;
@@ -85,7 +93,8 @@ const returnToMainMenu = () => {
 };
 
 /**
- * gets new question and randomize it, if there is no more available questions saves score to display at the end
+ * gets new question and randomize it,
+ *  if there is no more available questions saves score to display at the end
  * displays each answer on buttons
  * @returns void
  */
@@ -117,7 +126,8 @@ const getNewQuestion = () => {
 };
 
 /**
- * Checks for selected answer and if its true makes it correct if false makes it incorrect.
+ * Checks for selected answer and 
+ * if its true makes it correct if false makes it incorrect.
  */
 const answersCorrect = () => {
     answersRef.forEach(answer => {
@@ -155,13 +165,6 @@ const answersCorrect = () => {
 const incrementScore = num => score += num;
 
 /**
- * Listens to see if there is any input in, if input is empty wont let save the score
- */
-userResultRef.addEventListener("keyup", () => {
-    saveScoreRef.disabled = !userResultRef.value;
-});
-
-/**
  * Display score at the end of the game 
  */
 const getGameScore = () => {
@@ -178,11 +181,12 @@ const saveScoreBtn = () => {
 };
 
 /**
- * Pulls score from localstorage and makes it highest to lowest allowing only top 3 score to be saved/shown
- * @param {HTMLElement} e 
+ * Pulls score from localstorage and
+ * makes it highest to lowest allowing only top 3 score to be saved/shown
+ * @param {SubmitEvent} event 
  */
-const saveHighScore = (e) => {
-    e.preventDefault();
+const saveHighScore = (event) => {
+    event.preventDefault();
 
     const score = {
         score: window.localStorage.getItem("mostRecentScore"),
@@ -208,6 +212,10 @@ const returnToMainMenuTwo = () => {
     gameResultRef.style.display = "none";
     gameBoardRef.style.display = "flex";
 };
+
+userResultRef.addEventListener("keyup", () => {
+    saveScoreRef.disabled = !userResultRef.value;
+});
 
 window.addEventListener("DOMContentLoaded", () => {
     playGameRef.addEventListener("click", startGame);
