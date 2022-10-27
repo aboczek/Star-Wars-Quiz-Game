@@ -73,7 +73,7 @@ const startGame = () => {
 };
 
 /**
- * shows highscore in main menu
+ * Shows highscore in main menu
  * @returns {HTMLElement}
  */
 const showScore = () => {
@@ -93,7 +93,7 @@ const returnToMainMenu = () => {
 };
 
 /**
- * gets new question and randomize it,
+ * Gets new question and randomize it,
  *  if there is no more available questions saves score to display at the end
  * displays each answer on buttons
  * @returns void
@@ -159,7 +159,7 @@ const answersCorrect = () => {
 };
 
 /**
- * increases score displayed at the end of the game
+ * Increases score displayed at the end of the game
  * @param {Number} num 
  */
 const incrementScore = num => score += num;
