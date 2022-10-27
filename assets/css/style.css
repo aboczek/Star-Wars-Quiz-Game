@@ -72,11 +72,11 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     text-decoration: none;
     background-color: var(--yellow);
     width: 25rem;
@@ -123,11 +123,11 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     height: 100%;
 }
 
@@ -243,28 +243,28 @@ body {
 }
 
 ::-webkit-input-placeholder {
-    color: var(--lightgrey); 
-    opacity: 1;   
+    color: var(--lightgrey);
+    opacity: 1;
 }
 
 ::-moz-placeholder {
-    color: var(--lightgrey); 
-    opacity: 1;   
+    color: var(--lightgrey);
+    opacity: 1;
 }
 
 :-ms-input-placeholder {
-    color: var(--lightgrey); 
-    opacity: 1;   
+    color: var(--lightgrey);
+    opacity: 1;
 }
 
 ::-ms-input-placeholder {
-    color: var(--lightgrey); 
-    opacity: 1;   
+    color: var(--lightgrey);
+    opacity: 1;
 }
 
 ::placeholder {
-    color: var(--lightgrey); 
-    opacity: 1;   
+    color: var(--lightgrey);
+    opacity: 1;
 }
 
 #btn-lower {
