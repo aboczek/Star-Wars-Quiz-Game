@@ -89,7 +89,7 @@ and put into highscore.
     - Green #2FFF7C
     - <img src="documentation/green.png" width="100" alt="green color">
 
-    - Grey #D3d3d3
+    - Light grey #D3d3d3
     - <img src="documentation/lightgrey.png" width="100" alt="light grey color">
 
     - Yellow #FDB81E
