@@ -17,6 +17,7 @@
     --grey: #838383;
     --green: #2FFF7C;
     --red: #FF6B6B;
+    --lightgrey: #D3d3d3;
 }
 
 * {
@@ -67,9 +68,15 @@ body {
 }
 
 .btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-decoration: none;
     background-color: var(--yellow);
     width: 25rem;
@@ -99,22 +106,28 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
     text-align: center;
-    background-color: var(--yellow);
+    background-color: var(--blue);
     width: 25rem;
     height: 4.5rem;
     margin: 4.5rem 0 0 0;
     padding: 0.5rem;
     border: none;
     border-radius: 1rem;
-    color: var(--black);
+    color: var(--white);
     font-size: 1.7rem;
     font-weight: 700;
 }
 
 .answer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 100%;
 }
 
@@ -229,7 +242,31 @@ body {
     background-color: var(--red);
 }
 
-/** added for small phones **/
+::-webkit-input-placeholder {
+    color: var(--lightgrey); 
+    opacity: 1;   
+}
+
+::-moz-placeholder {
+    color: var(--lightgrey); 
+    opacity: 1;   
+}
+
+:-ms-input-placeholder {
+    color: var(--lightgrey); 
+    opacity: 1;   
+}
+
+::-ms-input-placeholder {
+    color: var(--lightgrey); 
+    opacity: 1;   
+}
+
+::placeholder {
+    color: var(--lightgrey); 
+    opacity: 1;   
+}
+
 #btn-lower {
     margin-bottom: 5rem;
 }
@@ -275,8 +312,6 @@ footer {
 #linkedin:hover {
     color: var(--grey);
 }
-
-
 
 @media (min-width: 468px) {
     #star-wars-logo {

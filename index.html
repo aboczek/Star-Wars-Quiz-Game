@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest" crossorigin="use-credentials">
     <!-- Fonts awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -56,15 +56,17 @@
             <h2 id="question-counter-number">1/10</h2>
         </div>
         <p id="bg-text">Question:</p>
+
         <p id="question"></p>
+
         <div class="btn-container">
-            <p class="answer" data-number="1">answer 1</p>
+            <p class="answer" data-number="1"></p>
         </div>
         <div class="btn-container">
-            <p class="answer" data-number="2">answer 2</p>
+            <p class="answer" data-number="2"></p>
         </div>
         <div class="btn-container" id="btn-lower">
-            <p class="answer" data-number="3">answer 3</p>
+            <p class="answer" data-number="3"></p>
         </div>
     </div>
 
@@ -73,7 +75,7 @@
         <h2>Score:</h2>
         <p id="game-score">0</p>
         <label for="result">Your Name:</label>
-        <input type="text" id="result" name="result" aria-label="Put your Nickname here.">
+        <input type="text" id="result" name="result" placeholder="Nickname">
         <button type="submit" class="btn" id="save-score" disabled>Save</button>
         <button class="btn" id="main-menu">Go back to Start</button>
     </div>
