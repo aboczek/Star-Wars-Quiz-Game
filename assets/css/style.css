@@ -10,7 +10,7 @@
 
 
 :root {
-    --bluebutton: #0071BC;
+    --blue: #0071BC;
     --white: #fff;
     --grey: #838383;
     --green: #2FFF7C;
@@ -65,7 +65,11 @@ body {
 }
 
 .btn {
-    background-color: var(--bluebutton);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--blue);
     width: 25rem;
     height: 4.5rem;
     margin: 4.5rem 0 0 0;
@@ -92,7 +96,7 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
     text-align: center;
-    background-color: var(--bluebutton);
+    background-color: var(--blue);
     width: 25rem;
     height: 4.5rem;
     margin: 4.5rem 0 0 0;
