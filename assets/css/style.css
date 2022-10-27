@@ -10,6 +10,8 @@
 
 
 :root {
+    --yellow: #FDB81E;
+    --black: #212121;
     --blue: #0071BC;
     --white: #fff;
     --grey: #838383;
@@ -69,19 +71,20 @@ body {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    background-color: var(--blue);
+    background-color: var(--yellow);
     width: 25rem;
     height: 4.5rem;
     margin: 4.5rem 0 0 0;
     border: none;
     border-radius: 1rem;
-    color: var(--white);
+    color: var(--black);
     font-size: 2rem;
     font-weight: 700;
 }
 
 .btn:hover {
-    background-color: var(--grey);
+    background-color: var(--blue);
+    color: var(--white);
 }
 
 .btn-container {
@@ -96,16 +99,16 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
     text-align: center;
-    background-color: var(--blue);
+    background-color: var(--yellow);
     width: 25rem;
     height: 4.5rem;
     margin: 4.5rem 0 0 0;
     padding: 0.5rem;
     border: none;
     border-radius: 1rem;
-    color: var(--white);
+    color: var(--black);
     font-size: 1.7rem;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 .answer {
